@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function createRandomImage() {
     const img = document.createElement("img");
-    img.src = "/logo/karamel.jpg";
+    img.src = "/public/assets/img/karamel.jpg";
     img.style.position = "absolute";
     img.style.width = `${getRandomSize(100, 500)}px`;
     img.style.height = "auto";
