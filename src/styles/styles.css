@@ -1,10 +1,10 @@
 @font-face {
     font-family: monasans;
-    src: url(/public/assets/fonts/MonaSansExpanded-Regular.woff2);
+    src: url(/public/assets/font/MonaSansExpanded-Regular.woff2);
 }
 @font-face {
   font-family: monasanscons;
-  src: url(/public/assets/fonts/MonaSans-Medium.woff2);
+  src: url(/public/assets/font/MonaSans-Medium.woff2);
 }
 @media screen and (max-width: 700px) {
 body{
