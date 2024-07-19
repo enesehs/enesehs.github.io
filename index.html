@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enesehs Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href=".//src/styles/gradient-bg.css">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="./assets/logo/enesehsdev.png" draggable="false" alt="Enesehs Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="mobile-alert" id="mobileAlert">
+  Mobil sürüm halâ geliştirme aşamasında. Lütfen masaüstü versiyonu kullanınız.
+</div>
+<div class="blur" id="blur"></div>
+  <div class="content" id="home">
+    <h1>I'm <span class="rolling-text"></span></h1>
+    <a href="#">
+      <img src="./assets/logo/profile-pic.png" draggable="false" id="pp" alt="profile-pic">
+    </a>
+    <div class="styles">
+      <img src="assets/img/Ball.png" id="ball" alt="Ball">
+      <img src="assets/img/X.png" id="x" alt="X">
+      <img src="assets/img/lines.png" id="lines" alt="Lines">
+      <img src="assets/img/stroke X.png" id="stroke" alt="Stroke X">
+      <img src="assets/img/left arrow big.png" id="arrow" alt="Left Arrow">
+      <img src="assets/img/dots.png" id="dots" alt="Dots">
+    </div>
+    <div class="vl"></div>
+    <div class="center">
+      <p id="text">&quot;I am Enes, a game developer with strong foundation in programming and a passion &nbsp&nbsp for creating immersive experiences. Currently, I am enhancing my skills in C++ and &nbsp&nbsp&nbsp&nbspUnreal Engine, while also expanding my knowledge in web development.&quot;</p>
+    </div>
+    <ul class="social-icons">
+      <li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li><a href="https://github.com/enesehs" id="github"><ion-icon name="logo-github"></ion-icon></a></li>
+      <li><a href="https://www.instagram.com/enesehs.dev/" id="instagram"><ion-icon name="logo-instagram"></a></ion-icon></li>
+      <li><a href="https://www.youtube.com/@enesehs" id="youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li><a href="https://profile.playstation.com/enesehs" id="playstation"><ion-icon name="logo-playstation"></ion-icon></a></li>
+    </ul>
+  </div>
+  <section class="about" id="about">
+    <h1>About Me</h1>
+    <p>Hello! I am Enes Hacısağır, 20 years old, and I am known for my deep interest in games and game development since my childhood. My curiosity about computer games has consistently motivated me to improve myself in this field. My dream is to make a name for myself in the gaming world, elevate my creativity to new heights, and achieve success with a AAA-class game.<br><br>
+
+      Throughout this process, I have had the opportunity to learn various skills such as programming, graphic design, storytelling, and game mechanics. By balancing technical and creative aspects, I am getting closer to my goal of creating a real gaming experience.<br><br>
+      
+      The dynamic nature of the gaming world has always excited me, and I have continued to closely follow its changes. In the future, I plan to further develop myself in the gaming industry and work diligently to produce impactful and unique games. In this passionate journey, I continue to view games not only as a means of entertainment but also as an art form.</p>
+  </section>
+  <section class="projects" id="projects">
+    <h1>My Projects</h1>
+    <div class="project" id="proj1">
+      <a href="https://github.com/enesehs/enesehs-windows-optimizer">
+        <h3>Enesehs's Windows Optimizer</h3></a>
+    </div>
+    <div class="project" id="proj2">
+      <h3>Project FSA <img src="./assets/logo/Unreal.png" alt="Unreal Logo" id="unreal"></h3>
+    </div>
+    <div class="project" id="proj3">
+      <h3>Project Horror <img src="./assets/logo/Unity.png" alt="Unity Logo" id="unity"></h3>
+    </div>
+  </section>
+  
+  <section class="contact-me" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfq7qrgGaoaFv18VVC-ZFeFeq4o9YpuNRUds3yfCxKU6S0Tow/formResponse" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="entry.1977863006" placeholder="Name Surname" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="entry.1990805682" placeholder="Email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="entry.2105838083" placeholder="" style="height:150px" required></textarea>  
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  <div class="gradient-bg">
+    <svg viewBox="0 0 100 100" xmlns='http://www.w3.org/2000/svg' class="noiseBg">
+      <filter id='noiseFilterBg'>
+        <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+      </filter>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="g6"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+  <click-spark></click-spark>
+  <footer>
+    <ul class="social-icon-footer">
+      <li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li><a href="https://github.com/enesehs" id="github"><ion-icon name="logo-github"></ion-icon></a></li>
+      <li><a href="https://www.instagram.com/enesehs.dev/" id="instagram"><ion-icon name="logo-instagram"></a></ion-icon></li>
+      <li><a href="https://www.youtube.com/@enesehs" id="youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li><a href="https://profile.playstation.com/enesehs" id="playstation"><ion-icon name="logo-playstation"></ion-icon></a></li>  
+    </ul>
+    <ul class="footer-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p>&copy; 2024 Enesehs. All rights reserved.</p>
+  </footer>
+  <script src="./src/index.js"></script>
+  <script src="./src/utils/clickspark.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
