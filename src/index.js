@@ -14,8 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('mousemove', event => {
-    tgX = event.clientX;
-    tgY = event.clientY;
+    
+    const scrollX = window.pageXOffset;
+    const scrollY = window.pageYOffset;
+
+    tgX = event.clientX + scrollX;
+    tgY = event.clientY + scrollY;
   });
 
   move();
@@ -43,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       rollingTextElement.removeChild(newRole);
-    }, 3000); // 3 saniye sonra eski yazıyı kaldır
+    }, 3000);
 
     currentIndex = (currentIndex + 1) % roles.length;
   }
@@ -51,25 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateRole, 3000);
   updateRole(); 
 });
-
-//p text anim
-const textElement = document.getElementById('text');
-const characters = textElement.innerText.split('');
-const animationDelay = 10;
-let newDom = '';
-
-characters.forEach(char => {
-    newDom += char === ' ' 
-        ? '<span class="char">&nbsp;</span>' 
-        : `<span class="char">${char}</span>`;
-});
-
-textElement.innerHTML = newDom;
-
-Array.from(textElement.children).forEach((child, index) => {
-    child.style.animationDelay = `${animationDelay * index}ms`;
-});
-
 
 
 // Memes
@@ -165,34 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-// Meme IV
-document.addEventListener("DOMContentLoaded", function() {
-  const sessionTimeout = 10 * 60 * 1000;
-  let timer;
-
-
-  startTimer();
-
-
-  document.addEventListener("click", function() {
-    resetTimer();
-  });
-
-  function startTimer() {
-    timer = setTimeout(function() {
-      showFunnyMessage();
-    }, sessionTimeout);
-  }
-
-  function resetTimer() {
-    clearTimeout(timer);
-    startTimer();
-  }
-
-  function showFunnyMessage() {
-    alert("Bomba imha kodları bulundu...");
-  }
-});
 
 //Mobile 
 function isMobile() {
@@ -202,4 +159,6 @@ function isMobile() {
 if (isMobile()) {
   document.getElementById('mobileAlert').style.display = 'block';
   document.getElementById('blur').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  document.body.style.pointerEvents = 'none';
 }
