@@ -2,7 +2,7 @@
 
 ## About Me
 - Passionate about: C#, C++, Python, HTML, CSS, JS, PHP, and Batch scripting
-- Currently diving deep into: C#,
+- Currently diving deep into: C ++ Unreal Engine,
 - Let's contact: [enesehs@protonmail.com](mailto:enesehs@protonmail.com)
 
 ## In Development Projects
