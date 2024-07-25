@@ -258,6 +258,26 @@ img#dots
   left: 49%;
   transform: translate(-50%, -50%);
 }
+img#pyramid
+{
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: 451.3%;
+  left: 62.5%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+img#taxi
+{
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: 322%;
+  left: 25.1%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
 
 .vl {
   position: absolute;
