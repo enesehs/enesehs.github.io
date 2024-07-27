@@ -13,33 +13,30 @@
     <a href="#" class="logo">
       <img src="./public/assets/logo/enesehsdev.png" draggable="false" alt="Enesehs Logo">
     </a>
-    <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    <label class="switch">
+      <input type="checkbox" id="toggleButton" checked>
+      <span class="slider"></span>
   </header>
 <div class="mobile-alert" id="mobileAlert">
   Mobil sürüm halâ geliştirme aşamasında. Lütfen masaüstü versiyonu kullanınız.
 </div>
 <div class="blur" id="blur"></div>
+</label>
   <div class="content" id="home">
     <h1>I'm <span class="rolling-text"></span></h1>
     <a href="#">
       <img src="./public/assets/logo/profile-pic.png" draggable="false" id="pp" alt="profile-pic">
     </a>
     <div class="styles">
-      <img src="./public/assets/img/Ball.png" id="ball" alt="Ball">
-      <img src="./public/assets/img/X.png" id="x" alt="X">
-      <img src="./public/assets/img/lines.png" id="lines" alt="Lines">
-      <img src="./public/assets/img/stroke X.png" id="stroke" alt="Stroke X">
-      <img src="./public/assets/img/left arrow big.png" id="arrow" alt="Left Arrow">
-      <img src="./public/assets/img/dots.png" id="dots" alt="Dots">
-      <img src="./public/assets/img/TaxiDriver.png" id="taxi" alt="TaxiDriver">
-      <img src="./public/assets/img/pyramid.png" id="pyramid" alt="SilentHill">
+      <img src="./public/assets/img/Ball.png" draggable="false" id="ball" alt="Ball">
+      <img src="./public/assets/img/X.png" draggable="false" id="x" alt="X">
+      <img src="./public/assets/img/lines.png" draggable="false" id="lines" alt="Lines">
     </div>
     <div class="vl"></div>
     <div class="center">
@@ -55,6 +52,7 @@
   </div>
   <section class="about" id="about">
     <h1>About Me</h1>
+    <img src="./public/assets/img/stroke X.png" draggable="false" id="stroke" alt="Stroke X">
     <p>Hello! I am Enes Hacısağır, 20 years old, and I am known for my deep interest in games and game development since my childhood. My curiosity about computer games has consistently motivated me to improve myself in this field. My dream is to make a name for myself in the gaming world, elevate my creativity to new heights, and achieve success with a AAA-class game.<br><br>
 
       Throughout this process, I have had the opportunity to learn various skills such as programming, graphic design, storytelling, and game mechanics. By balancing technical and creative aspects, I am getting closer to my goal of creating a real gaming experience.<br><br>
@@ -63,20 +61,23 @@
   </section>
   <section class="projects" id="projects">
     <h1>My Projects</h1>
+    <img src="./public/assets/img/left arrow big.png" draggable="false" id="arrow" alt="Left Arrow">
     <div class="project" id="proj1">
       <a href="https://github.com/enesehs/enesehs-windows-optimizer">
         <h3>Enesehs's Windows Optimizer</h3></a>
     </div>
     <div class="project" id="proj2">
-      <h3>Project FSA <img src="./public/assets/logo/Unreal.png" alt="Unreal Logo" id="unreal"></h3>
+      <h3>Project FSA <img src="./public/assets/logo/Unreal.png" draggable="false" alt="Unreal Logo" id="unreal"></h3>
     </div>
     <div class="project" id="proj3">
-      <h3>Project Horror <img src="./public/assets/logo/Unity.png" alt="Unity Logo" id="unity"></h3>
+      <h3>Project Horror <img src="./public/assets/logo/Unity.png" draggable="false" alt="Unity Logo" id="unity"></h3>
     </div>
   </section>
 
   <section class="contact-me" id="contact">
     <h2>Contact Me</h2>
+    <img src="./public/assets/img/TaxiDriver.png" draggable="false" id="taxi" alt="TaxiDriver">
+    <img src="./public/assets/img/dots.png" draggable="false" id="dots" alt="Dots">
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfq7qrgGaoaFv18VVC-ZFeFeq4o9YpuNRUds3yfCxKU6S0Tow/formResponse" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="entry.1977863006" placeholder="Name Surname" required>
@@ -134,7 +135,8 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <p>&copy; 2024 Enesehs | Eclipse Public License 2.0 </p>
+    <p>&copy; 2024 Enesehs | All Rights Reserved</p>
+          <img src="./public/assets/img/pyramid.png" draggable="false" id="pyramid" alt="SilentHill">
   </footer>
   <script src="./src/index.js"></script>
   <script src="./src/utils/clickspark.js"></script>
