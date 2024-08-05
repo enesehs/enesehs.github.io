@@ -1,0 +1,147 @@
+@media screen and (max-width: 700px)
+/*Mobile*/
+    {
+    .gradient-bg {
+        height: 430vh;
+        width: 700px;
+        /* Hepsine ekle*/
+    }
+
+    .g1,
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6 {
+        width: 50%;
+        height: 50%;
+        top: calc(50% - 25%);
+        left: calc(50% - 25%);
+    }
+
+    /*Header*/
+    body {
+        width: 700px;
+
+    }
+
+    .logo img {
+        width: 260px;
+    }
+
+    header {
+        padding: 0 10px;
+        height: 100px;
+        width: 700px;
+    }
+
+    header ul {
+        left: 50px;
+
+        padding: 0;
+    }
+
+    .switch {
+        left: 0px;
+    }
+
+    /*Home*/
+
+    #pp {
+        width: 200px;
+        height: auto;
+        top: 35%;
+        left: 140%;
+    }
+
+    #ball {
+        width: 86px;
+        height: auto;
+        top: 25%;
+        left: 120%;
+    }
+
+    #x {
+        width: 20px;
+        height: auto;
+        top: 48%;
+        left: 160%;
+    }
+
+    .content h1 {
+        font-size: 32px;
+        width: 100%;
+        height: 6%;
+        left: 15%;
+        top: 35%;
+    }
+
+    .rolling-text {
+        width: 100%;
+        height: 100%;
+        top: -120%;
+        left: 60%;
+    }
+
+    .content p {
+        font-size: 16px;
+        width: 155%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        bottom: 50%;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+    /*About Me*/
+
+    section.about {
+        width: 130%;
+        left: 80%;
+    }
+
+    section.projects h1 {
+        width: 500px;
+        left: -150px;
+        padding: 20px;
+    }
+    #arrow{
+        display: none;
+    }
+
+    section.projects h3 {
+        font-size: 20px;
+    }
+
+    #stroke {
+        width: 80px;
+        left: 100%;
+    }
+
+    section.projects img {
+        width: 30px;
+    }
+
+    section.projects {
+        width: 100%;
+        left: 90%;
+    }
+
+    #arrow {
+        width: 70%;
+        left: 30%;
+    }
+
+    section.contact-me {
+        width: 600px;
+        left: 90%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+}

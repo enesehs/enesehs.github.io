@@ -1,0 +1,431 @@
+@media screen and (max-width: 600px)
+/*Mobile*/
+    {
+    .gradient-bg {
+        height: 430vh;
+        width: 2400px;
+        /* Hepsine ekle*/
+    }
+
+    .g1,
+    .g2,
+    .g3,
+    .g4,
+    .g5,
+    .g6 {
+        width: 50%;
+        height: 50%;
+        top: calc(50% - 25%);
+        left: calc(50% - 25%);
+    }
+
+    /*Header*/
+
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .logo img {
+        width: 210px;
+    }
+
+    header {
+        padding: 0 20px;
+        height: 100px;
+    }
+
+    header ul {
+        left: 10px;
+    }
+
+    .switch {
+        left: 10px;
+    }
+
+    /*Home*/
+
+    #pp {
+        width: 200px;
+        height: auto;
+        top: 35%;
+        left: 140%;
+    }
+    #ball {
+        width: 86px;
+        height: auto;
+        top: 25%;
+        left: 120%;
+    }
+    #x {
+        width: 20px;
+        height: auto;
+        top: 48%;
+        left: 165%;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        width: 100%;
+        height: 10%;
+        left: 20%;
+        border: 2px solid ;
+    }
+    .rolling-text {
+        width: 100%;
+        height: 100%;
+       border: 2px solid red;
+       top:-100%;
+        left: 60%;
+      }
+
+    .content p {
+        font-size: 20px;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
+}
+
+
+
+
+/*050824*/
+@media screen and (max-width: 700px)
+/*Mobile*/
+    {
+    .gradient-bg {
+        height: 430vh;
+        width: 1000px;
+        /* Hepsine ekle*/
+    }
+
+    /*Header*/
+
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .logo img {
+        width: 20px;
+    }
+
+    header {
+        padding: 0 10px;
+        height: 100px;
+    }
+
+    header ul {
+        left: 40px;
+    }
+
+    .switch {
+        left: 10px;
+    }
+
+    /*Home*/
+
+    #pp {
+        width: 200px;
+        height: auto;
+        top: 35%;
+        left: 140%;
+    }
+
+    #ball {
+        width: 86px;
+        height: auto;
+        top: 25%;
+        left: 120%;
+    }
+
+    #x {
+        width: 20px;
+        height: auto;
+        top: 48%;
+        left: 165%;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        width: 90%;
+        height: 10%;
+        left: 15%;
+        top: 35%;
+    }
+
+    .rolling-text {
+        width: 100%;
+        height: 100%;
+        top: -78%;
+        left: 62%;
+    }
+
+    .content p {
+        font-size: 20px;
+        width: 130%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        bottom: 45%;
+        left: 138%;
+        transform: translateX(-50%);
+    }
+
+    /*About Me*/
+
+    section.about {
+        width: 90%;
+        left: 60%;
+    }
+
+    section.about h1,
+    section.projects h1 {
+        font-size: 60px;
+    }
+
+    section.projects {
+        width: 100%;
+    }
+
+    section.projects h3 {
+        font-size: 16px;
+    }
+
+    #stroke {
+        width: 100px;
+        left: 90%;
+    }
+
+    section.projects img {
+        width: 30px;
+    }
+
+    section.projects {
+        width: 90%;
+        left: 80%;
+    }
+
+    #arrow {
+        width: 70%;
+        left: 30%;
+    }
+
+    section.contact-me {
+        left: 85%;
+    }
+
+    footer {
+        width: 166.8%;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px)
+    {
+    .gradient-bg {
+        height: 430vh;
+        width: 1000px;
+    }
+
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .logo img {
+        width: 210px;
+    }
+
+    header {
+        padding: 0 20px;
+        height: 100px;
+    }
+
+    header ul {
+        left: 10px;
+    }
+
+    .switch {
+        left: 10px;
+    }
+
+
+    #pp {
+        width: 200px;
+        height: auto;
+        top: 35%;
+        left: 140%;
+    }
+
+    #ball {
+        width: 86px;
+        height: auto;
+        top: 25%;
+        left: 120%;
+    }
+
+    #x {
+        width: 20px;
+        height: auto;
+        top: 48%;
+        left: 165%;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        width: 90%;
+        height: 10%;
+        left: 15%;
+        top: 35%;
+    }
+
+    .rolling-text {
+        width: 100%;
+        height: 100%;
+        top: -78%;
+        left: 62%;
+    }
+
+    .content p {
+        font-size: 20px;
+        width: 130%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        bottom: 45%;
+        left: 138%;
+        transform: translateX(-50%);
+    }
+
+    section.about {
+        width: 90%;
+        left: 60%;
+    }
+
+    section.about h1,
+    section.projects h1 {
+        font-size: 60px;
+    }
+
+    section.projects {
+        width: 100%;
+    }
+
+    section.projects h3 {
+        font-size: 16px;
+    }
+
+    #stroke {
+        width: 100px;
+        left: 90%;
+    }
+
+    section.projects img {
+        width: 30px;
+    }
+
+    section.projects {
+        width: 90%;
+        left: 80%;
+    }
+
+    #arrow {
+        width: 70%;
+        left: 30%;
+    }
+
+    section.contact-me {
+        left: 85%;
+    }
+
+    footer {
+        width: 166.8%;
+    }
+}
+
+
+
+@media screen and (max-width: 1920px) {
+    .content h1 {
+        font-size: 100px;
+        width: 90%;
+        height: 10%;
+        left: 10%;
+        top: 35%;
+    }
+    body{
+        background-color: red;
+    }
+    .switch {
+        left: -30px;
+    }
+
+    .rolling-text {
+        width: 100%;
+        height: 120%;
+        top: -148%;
+        left: 56%;
+    }
+
+    #pp {
+        width: 400px;
+    }
+
+    #ball {
+        width: 160px;
+    }
+
+    #x {
+        width: 40px;
+    }
+    .content p {
+        font-size: 30px;
+        width: 70%;
+        left: 43%;
+        top: 73%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        font-size: 20px;
+        bottom: 20%;
+        left: 84%;
+        transform: translateX(-50%);
+    }
+    .social-icons a {
+        font-size: 40px;
+    }
+    
+    footer {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
