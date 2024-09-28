@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Meme IV
 document.getElementById('taxi').addEventListener('click', function() {
-  var videoUrl = 'https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1vq=hd2160';
+  var videoUrl = 'https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1&vq=hd2160';
 
   // Tam ekran fonksiyonu
   function openFullscreen(element) {
@@ -262,11 +262,14 @@ document.getElementById('taxi').addEventListener('click', function() {
   videoDiv.addEventListener('click', function() {
       document.body.removeChild(videoDiv);
   });
+  document.addEventListener('keydown', function(event) {
+    document.body.removeChild(videoDiv);
+}, { once: true });
 });
 
 //Meme V
 document.getElementById('pyramid').addEventListener('click', function() {
-  var videoUrl = 'https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1vq=hd2160';
+  var videoUrl = 'https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1&vq=hd2160';
 
   // Tam ekran fonksiyonu
   function openFullscreen(element) {
@@ -307,11 +310,63 @@ document.getElementById('pyramid').addEventListener('click', function() {
   videoDiv.addEventListener('click', function() {
       document.body.removeChild(videoDiv);
   });
+  document.addEventListener('keydown', function(event) {
+    document.body.removeChild(videoDiv);
+}, { once: true });
+});
+//Meme VI
+document.getElementById('dansedenkurbaga').addEventListener('click', function() {
+  var videoUrl = 'https://www.youtube.com/embed/zbh5YUax0uc?autoplay=1&fs=1&vq=hd2160';
+
+  function openFullscreen(element) {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { // firefox
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { // chromium
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { // edge
+          element.msRequestFullscreen();
+      }
+  }
+
+  var videoDiv = document.createElement('div');
+  videoDiv.style.position = 'fixed';
+  videoDiv.style.top = '0';
+  videoDiv.style.left = '0';
+  videoDiv.style.width = '100%';
+  videoDiv.style.height = '100%';
+  videoDiv.style.zIndex = '1000';
+  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('src', videoUrl);
+  iframe.setAttribute('width', '100%');
+  iframe.setAttribute('height', '100%');
+  iframe.setAttribute('allow', 'autoplay; fullscreen');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allowfullscreen', '');
+
+  videoDiv.appendChild(iframe);
+  document.body.appendChild(videoDiv);
+
+  // tam ekran yap
+  openFullscreen(videoDiv);
+
+  videoDiv.addEventListener('click', function() {
+      document.body.removeChild(videoDiv);
+  });
+  document.addEventListener('keydown', function(event) {
+      document.body.removeChild(videoDiv);
+  }, { once: true });
 });
 
+
+//mobil kontrol
 function isMobile() {
   return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
+
 
 function closeAlert() {
   document.getElementById('mobileAlert').style.display = 'none';

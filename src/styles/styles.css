@@ -286,7 +286,7 @@ input:checked+.slider:before {
 
 .vl {
   position: absolute;
-  top: 70%;
+  top: 71%;
   left: 5%;
   transform: translate(-50%, -50%);
   border-left: 3px solid rgb(255, 255, 255);
@@ -296,12 +296,12 @@ input:checked+.slider:before {
 .content p {
   position: absolute;
   font-weight: 200;
+  font-size: 18px;
   top: 75%;
   left: 40%;
   width: 1000px;
   height: 200px;
   transform: translate(-50%, -50%);
-  font-size: 24px;
   color: #fff;
   z-index: 1;
   cursor: default;
@@ -628,17 +628,52 @@ footer p {
   justify-content: center;
   align-items: center;
   opacity: 0.7;
+
 }
 
 #pyramid {
-  bottom: 1.4rem;
+  bottom: 1.5rem;
   height: auto;
   left: 11rem;
   position: relative;
   width: 20px;
   z-index: 998;
+
+}
+#Bug {
+  list-style-type: none;
+  width:50px;
+  left: 90rem;
+  bottom:-156rem;
+  position: absolute;
+  z-index: 999;
 }
 
+#Bug a {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 40%; 
+  line-height: 60px;
+  transition: all 0.6s ease; 
+}
+#Bug ion-icon {
+  
+  font-size: 24px; 
+  transition: all 0.6s ease; 
+}
+#Bug a:hover {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 3px rgb(255, 255, 255); 
+  background-color: rgba(255, 255, 255, 0.088);
+}
+
+#Bug a:hover ion-icon {
+  color: #ffffff;
+  text-shadow: 0px 0px 2px #2fff00;
+}
 .social-icon-footer,
 .footer-menu {
   position: relative;
