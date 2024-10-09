@@ -61,6 +61,7 @@ class ClickSpark extends HTMLElement {
       <style>
         :host {
           display: contents;
+          z-index: 999;
         }
         
         svg {
@@ -68,12 +69,14 @@ class ClickSpark extends HTMLElement {
           position: absolute;
           rotate: -20deg;
           stroke: var(--click-spark-color, #fff);
+          z-index: 999;
         }
 
         line {
           stroke-dasharray: 30;
           stroke-dashoffset: 30;
           transform-origin: center;
+          z-index: 999;
         }
       </style>
       <svg width="30" height="30" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">

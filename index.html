@@ -10,7 +10,13 @@
   <link rel="stylesheet" href="./src/styles/styles.css">
   <link rel="stylesheet" href="./src/styles/responsive.css">
 </head>
-
+<div id="mobile-overlay">
+  <div class="overlay-content">
+      <img src="./public/assets/img/giphy.webp" alt="Developing"/>
+      <p>The mobile section is currently under construction. <br>Please consider using the PC version for the best experience!</p>
+      <p>¯\_(ツ)_/¯</p>
+  </div>
+</div>
 <body>
   <header>
     <a href="#" class="logo">
@@ -30,10 +36,11 @@
     </label>
   </header>
   <div id="blur"></div>
+  <!-- OLD MOBILE ALERT
   <div id="mobileAlert">
     <span class="close-button" onclick="closeAlert()">×</span>
     For enhanced performance and stability, please consider using the PC version.
-  </div>
+  </div>-->
   </label>
   <section id="home">
     <div class="content">
@@ -102,18 +109,23 @@
     <h2>Contact Me</h2>
     <img src="./public/assets/img/TaxiDriver.png" draggable="false" id="taxi" alt="TaxiDriver">
     <img src="./public/assets/img/dots.png" draggable="false" id="dots" alt="Dots">
-    <form
-      action="https://docs.google.com/forms/d/e/1FAIpQLSfq7qrgGaoaFv18VVC-ZFeFeq4o9YpuNRUds3yfCxKU6S0Tow/formResponse"
-      method="POST">
+    <form id="contact-form" onsubmit="submitForm(event)">
       <label for="name">Name</label>
       <input type="text" id="name" name="entry.1977863006" placeholder="Name Surname" required>
+      
       <label for="email">Email</label>
-      <input type="email" id="email" name="entry.1990805682" placeholder="Email" required>
+      <input type="email" id="email" name="entry.1990805682" placeholder="Email" required oninput="toggleCaptcha()">
+      
       <label for="message">Message</label>
       <textarea id="message" name="entry.2105838083" placeholder="" style="height:150px" required></textarea>
+      
+      <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04"></div>
+                                        <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
+      
       <input type="submit" value="Submit">
     </form>
   </section>
+
   <div class="gradient-bg">
     <svg viewBox="0 0 100 100" xmlns='http://www.w3.org/2000/svg' class="noiseBg">
       <filter id='noiseFilterBg'>
@@ -171,12 +183,20 @@
         <ion-icon name="bug-outline"></ion-icon>
       </a>
     </li>
+    <div class="language-selector">
+      <button id="en-btn"><img width="30" height="30" src="public/assets/flags/uk.svg" alt="turkey-circular"/></button>
+      
+      <button id="tr-btn"><img width="30" height="30" src="public/assets/flags/tr.svg" alt="turkey-circular"/></button>
+    </div>
   </footer>
   <script src="./src/index.js"></script>
   <script src="./src/utils/clickspark.js"></script>
+  <script src="./src/utils/lang.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./src/utils/captcha.js"></script>
   <script>
     ScrollReveal().reveal('.contact-me', {
       distance: '-30px',
