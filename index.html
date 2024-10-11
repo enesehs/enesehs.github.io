@@ -12,9 +12,18 @@
 </head>
 <div id="mobile-overlay">
   <div class="overlay-content">
-      <img src="./public/assets/img/giphy.webp" alt="Developing"/>
+      <img src="./public/assets/img/developing.webp" alt="Developing"/>
       <p>The mobile section is currently under construction. <br>Please consider using the PC version for the best experience!</p>
-      <p>¯\_(ツ)_/¯</p>
+      <h1>¯\_(ツ)_/¯</h1>
+    <div class="quick-contact"><li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
+      </li>
+      <li><a href="https://github.com/enesehs" id="github"><ion-icon name="logo-github"></ion-icon></a></li>
+      <li><a href="https://www.instagram.com/enesehs.dev/" id="instagram"><ion-icon
+            name="logo-instagram"></a></ion-icon>
+      </li>
+      <li><a href="https://www.youtube.com/@enesehs" id="youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      </ul>
+    </div>
   </div>
 </div>
 <body>
@@ -35,13 +44,13 @@
       <span class="slider"></span>
     </label>
   </header>
+  </label>
+  <!-- Old Mobile Alert
   <div id="blur"></div>
-  <!-- OLD MOBILE ALERT
   <div id="mobileAlert">
     <span class="close-button" onclick="closeAlert()">×</span>
     For enhanced performance and stability, please consider using the PC version.
   </div>-->
-  </label>
   <section id="home">
     <div class="content">
       <h1>I'm <span class="rolling-text"></span></h1>
@@ -55,7 +64,12 @@
       </div>
       <div class="vl"></div>
       <div class="center">
-        <p id="text">&quot;I'm Enes. My passion for game development started at a young age and was shaped by my early experiences with programming. I'm the founder and lead developer of Plasenta Entertainment. I've completed several prestigious programs, including the Google Game and App Academy. Using Unreal Engine 5 and C++, I bring my imagination to life through game projects. My goal is to create unforgettable gaming experiences, and I have big dreams in this field. If you'd like to collaborate with me on this journey, feel free to get in touch.
+        <p id="text">&quot;I'm Enes. My passion for game development started at a young age, fueled by my early
+          experiences with programming. I'm the founder and lead developer of Plasenta Entertainment. I've completed
+          multiple prestigious programs, including the Google Game and App Academy. Using Unreal Engine 5 and C++, I
+          bring my imagination to life through game projects. My goal is to create unforgettable gaming experiences, and
+          I am committed to pushing the boundaries of game development. If you'd like to collaborate with me on this
+            journey, feel free to <a href="#contact" id="get-in-touch">get in touch.</a>
 
           &quot;</p>
       </div>
@@ -63,8 +77,10 @@
         <li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
         </li>
         <li><a href="https://github.com/enesehs" id="github"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="#"><img src="./public/assets/logo/Plasenta.png" draggable="false" id="plasenta"></a></li>
         <li><a href="https://www.instagram.com/enesehs.dev/" id="instagram"><ion-icon
-              name="logo-instagram"></a></ion-icon></li>
+              name="logo-instagram"></a></ion-icon>
+        </li>
         <li><a href="https://www.youtube.com/@enesehs" id="youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
         <li><a href="https://profile.playstation.com/enesehs" id="playstation"><ion-icon
               name="logo-playstation"></ion-icon></a></li>
@@ -112,20 +128,15 @@
     <form id="contact-form" onsubmit="submitForm(event)">
       <label for="name">Name</label>
       <input type="text" id="name" name="entry.1977863006" placeholder="Name Surname" required>
-      
       <label for="email">Email</label>
       <input type="email" id="email" name="entry.1990805682" placeholder="Email" required oninput="toggleCaptcha()">
-      
       <label for="message">Message</label>
       <textarea id="message" name="entry.2105838083" placeholder="" style="height:150px" required></textarea>
-      
       <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04"></div>
-                                        <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
-      
+      <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
       <input type="submit" value="Submit">
     </form>
   </section>
-
   <div class="gradient-bg">
     <svg viewBox="0 0 100 100" xmlns='http://www.w3.org/2000/svg' class="noiseBg">
       <filter id='noiseFilterBg'>
@@ -164,6 +175,7 @@
       <li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
       </li>
       <li><a href="https://github.com/enesehs" id="github"><ion-icon name="logo-github"></ion-icon></a></li>
+      <li><a><img src="./public/assets/logo/Plasenta.png" draggable="false" id="plasenta-footer"></a></li>
       <li><a href="https://www.instagram.com/enesehs.dev/" id="instagram"><ion-icon
             name="logo-instagram"></a></ion-icon></li>
       <li><a href="https://www.youtube.com/@enesehs" id="youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
@@ -178,25 +190,25 @@
     </ul>
     <p>&copy; 2024 Enesehs | All Rights Reserved</p>
     <img src="./public/assets/img/pyramid.png" draggable="false" id="pyramid" alt="SilentHill">
-    <li id="Bug" >
+    <li id="Bug">
       <a href="#" id="dansedenkurbaga">
         <ion-icon name="bug-outline"></ion-icon>
       </a>
     </li>
     <div class="language-selector">
-      <button id="en-btn"><img width="30" height="30" src="public/assets/flags/uk.svg" alt="turkey-circular"/></button>
-      
-      <button id="tr-btn"><img width="30" height="30" src="public/assets/flags/tr.svg" alt="turkey-circular"/></button>
+      <button id="en-btn"><img width="30" height="30" src="public/assets/flags/uk.svg" alt="turkey-circular" /></button>
+
+      <button id="tr-btn"><img width="30" height="30" src="public/assets/flags/tr.svg" alt="turkey-circular" /></button>
     </div>
   </footer>
   <script src="./src/index.js"></script>
-  <script src="./src/utils/clickspark.js"></script>
   <script src="./src/utils/lang.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="./src/utils/clickspark.js"></script>
   <script src="https://hcaptcha.com/1/api.js" async defer></script>
+  <script src="./src/utils/captcha.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="./src/utils/captcha.js"></script>
   <script>
     ScrollReveal().reveal('.contact-me', {
       distance: '-30px',

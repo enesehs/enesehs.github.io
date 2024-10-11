@@ -1,1 +1,415 @@
-function isMobile(){return/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)}document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".interactive"),t=document.getElementById("toggleButton"),l=0,n=0,r=0,s=0,i=!0;e.style.transition="opacity 0.7s ease-in-out";let o=()=>{l+=(r-l)/20,n+=(s-n)/20,e.style.transform=`translate(${Math.round(l)}px, ${Math.round(n)}px)`,requestAnimationFrame(o)},d=e=>{if(!i)return;let t=window.pageXOffset,l=window.pageYOffset;r=e.clientX+t,s=e.clientY+l};function a(e){let t=document.createElement("div");t.textContent=e,t.style.fontFamily="MonaSansMedium",t.style.position="fixed",t.style.bottom="20px",t.style.right="20px",t.style.backgroundColor="#080a0f80",t.style.color="#fff",t.style.padding="10px 20px",t.style.borderRadius="5px",t.style.boxShadow="0 2px 10px rgba(0, 0, 0, 0.2)",t.style.zIndex="1000",t.style.opacity="0",document.body.appendChild(t),setTimeout(()=>{t.style.opacity="1"},100),setTimeout(()=>{t.style.opacity="0",setTimeout(()=>{document.body.removeChild(t)},500)},3e3)}window.addEventListener("mousemove",d),t.addEventListener("click",()=>{i=!i,e.style.opacity=i?"0.7":"0",a(i?"Tracking is ON":"Tracking is OFF")}),o()}),type="text/javascript">window.addEventListener("scroll",function(){document.querySelector("header").classList.toggle("sticky",window.scrollY>2)}),document.addEventListener("DOMContentLoaded",function(){let e=["Jr. Game Developer","Full-Stack Developer","Gamer","Enesehs","Coder",],t=document.querySelector(".rolling-text"),l=0;function n(){let n=document.createElement("div");n.classList.add("text"),n.textContent=e[l],t.appendChild(n),setTimeout(()=>{t.removeChild(n)},3e3),l=(l+1)%e.length}setInterval(n,3e3),n()}),document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelectorAll("nav ul li a"),t=document.querySelectorAll("section"),l,n=new IntersectionObserver(t=>{t.forEach(t=>{let n=t.target.getAttribute("id");t.isIntersecting?(clearTimeout(l),e.forEach(e=>{e.classList.toggle("active",e.getAttribute("href")===`#${n}`)}),l=setTimeout(()=>{e.forEach(e=>{e.classList.remove("active")})},2e3)):clearTimeout(l)})},{threshold:.7});t.forEach(e=>n.observe(e))}),document.addEventListener("DOMContentLoaded",function(){let e=document.getElementById("pp"),t=0;e.addEventListener("click",function(){2==++t&&(window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank"),t=0),setTimeout(function(){t=0},500)}),e.addEventListener("contextmenu",function(e){e.preventDefault(),window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank")})}),document.addEventListener("DOMContentLoaded",function(){let e=0,t;function l(){let e=document.createElement("img");e.src="/public/assets/img/karamel.jpg",e.style.position="absolute",e.style.width=`${Math.floor(401*Math.random())+100}px`,e.style.height="auto",e.style.top=`${n(1920)}px`,e.style.left=`${n(1080)}px`,e.style.zIndex=999,document.body.appendChild(e),setTimeout(()=>{e.remove()},9e3)}function n(e){return Math.floor(Math.random()*e)}document.addEventListener("click",function(){if(e++,clearTimeout(t),t=setTimeout(()=>{e=0},2e3),e>=15){for(let n=0;n<50;n++)setTimeout(l,50*n);e=0}})}),document.addEventListener("DOMContentLoaded",function(){let e=[],t=["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a",];document.addEventListener("keydown",function(l){e.push(l.key),JSON.stringify(e=e.slice(-t.length))===JSON.stringify(t)&&alert("Hile Aktif Edildi!")})}),document.getElementById("taxi").addEventListener("click",function(){var e=document.createElement("div");e.style.position="fixed",e.style.top="0",e.style.left="0",e.style.width="100%",e.style.height="100%",e.style.zIndex="1000",e.style.backgroundColor="rgba(0, 0, 0, 0.8)";var t,l=document.createElement("iframe");l.setAttribute("src","https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1&vq=hd2160"),l.setAttribute("width","100%"),l.setAttribute("height","100%"),l.setAttribute("allow","autoplay; fullscreen"),l.setAttribute("frameborder","0"),l.setAttribute("allowfullscreen",""),e.appendChild(l),document.body.appendChild(e),(t=e).requestFullscreen?t.requestFullscreen():t.mozRequestFullScreen?t.mozRequestFullScreen():t.webkitRequestFullscreen?t.webkitRequestFullscreen():t.msRequestFullscreen&&t.msRequestFullscreen(),e.addEventListener("click",function(){document.body.removeChild(e)}),document.addEventListener("keydown",function(t){document.body.removeChild(e)},{once:!0})}),document.getElementById("pyramid").addEventListener("click",function(){var e=document.createElement("div");e.style.position="fixed",e.style.top="0",e.style.left="0",e.style.width="100%",e.style.height="100%",e.style.zIndex="1000",e.style.backgroundColor="rgba(0, 0, 0, 0.8)";var t,l=document.createElement("iframe");l.setAttribute("src","https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1&vq=hd2160"),l.setAttribute("width","100%"),l.setAttribute("height","100%"),l.setAttribute("allow","autoplay; fullscreen"),l.setAttribute("frameborder","0"),l.setAttribute("allowfullscreen",""),e.appendChild(l),document.body.appendChild(e),(t=e).requestFullscreen?t.requestFullscreen():t.mozRequestFullScreen?t.mozRequestFullScreen():t.webkitRequestFullscreen?t.webkitRequestFullscreen():t.msRequestFullscreen&&t.msRequestFullscreen(),e.addEventListener("click",function(){document.body.removeChild(e)}),document.addEventListener("keydown",function(t){document.body.removeChild(e)},{once:!0})}),document.getElementById("dansedenkurbaga").addEventListener("click",function(){var e=document.createElement("div");e.style.position="fixed",e.style.top="0",e.style.left="0",e.style.width="100%",e.style.height="100%",e.style.zIndex="1000",e.style.backgroundColor="rgba(0, 0, 0, 0.2)";var t,l=document.createElement("iframe");l.setAttribute("src","https://www.youtube.com/embed/zbh5YUax0uc?autoplay=1&fs=1&vq=hd2160"),l.setAttribute("width","100%"),l.setAttribute("height","100%"),l.setAttribute("allow","autoplay; fullscreen"),l.setAttribute("frameborder","0"),l.setAttribute("allowfullscreen",""),e.appendChild(l),document.body.appendChild(e),(t=e).requestFullscreen?t.requestFullscreen():t.mozRequestFullScreen?t.mozRequestFullScreen():t.webkitRequestFullscreen?t.webkitRequestFullscreen():t.msRequestFullscreen&&t.msRequestFullscreen(),e.addEventListener("click",function(){document.body.removeChild(e)}),document.addEventListener("keydown",function(t){document.body.removeChild(e)},{once:!0})}),isMobile()&&(document.getElementById("mobile-overlay").style.display="flex");
+//Gradient BG
+document.addEventListener("DOMContentLoaded", () => {
+  let interactiveElement = document.querySelector(".interactive"),
+    toggleButton = document.getElementById("toggleButton"),
+    x = 0,
+    y = 0,
+    targetX = 0,
+    targetY = 0,
+    trackingEnabled = true;
+
+  interactiveElement.style.transition = "opacity 0.7s ease-in-out";
+
+  let animate = () => {
+    x += (targetX - x) / 20;
+    y += (targetY - y) / 20;
+    interactiveElement.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+    requestAnimationFrame(animate);
+  };
+
+  let handleMouseMove = (event) => {
+    if (!trackingEnabled) return;
+    let pageX = window.pageXOffset,
+      pageY = window.pageYOffset;
+    targetX = event.clientX + pageX;
+    targetY = event.clientY + pageY;
+  };
+
+  function showMessage(message) {
+    let messageDiv = document.createElement("div");
+    messageDiv.textContent = message;
+    messageDiv.style.fontFamily = "MonaSansMedium";
+    messageDiv.style.position = "fixed";
+    messageDiv.style.bottom = "20px";
+    messageDiv.style.right = "20px";
+    messageDiv.style.backgroundColor = "#080a0f52";
+    messageDiv.style.backdropFilter = "blur(10px)";
+    messageDiv.style.color = "#fff";
+    messageDiv.style.padding = "10px 20px";
+    messageDiv.style.borderRadius = "5px";
+    messageDiv.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+    messageDiv.style.zIndex = "1000";
+    messageDiv.style.opacity = "0";
+    messageDiv.style.transition = "opacity 0.5s ease-in-out";
+    document.body.appendChild(messageDiv);
+    setTimeout(() => { messageDiv.style.opacity = "1"; }, 100);
+    setTimeout(() => {
+      messageDiv.style.opacity = "0";
+      setTimeout(() => { document.body.removeChild(messageDiv); }, 500);
+    }, 3000);
+  }
+
+  window.addEventListener("mousemove", handleMouseMove);
+
+  toggleButton.addEventListener("click", () => {
+    trackingEnabled = !trackingEnabled;
+    interactiveElement.style.opacity = trackingEnabled ? "0.7" : "0";
+    showMessage(trackingEnabled ? "Tracking is ON" : "Tracking is OFF");
+  });
+
+  animate();
+});
+
+
+//scroll
+type="text/javascript">
+window.addEventListener("scroll", function(){
+var header = document.querySelector("header");
+header.classList.toggle("sticky", window.scrollY > 2);
+})
+
+//Roll Text Anim
+document.addEventListener("DOMContentLoaded", function () {
+  const roles = ["Jr. Game Developer", "Full-Stack Developer", "Gamer", "Enesehs", "Coder"];
+  const rollingTextElement = document.querySelector(".rolling-text");
+
+  let currentIndex = 0;
+
+  function updateRole() {
+    const newRole = document.createElement("div");
+    newRole.classList.add("text");
+    newRole.textContent = roles[currentIndex];
+    rollingTextElement.appendChild(newRole);
+
+    setTimeout(() => {
+      rollingTextElement.removeChild(newRole);
+    }, 3000);
+
+    currentIndex = (currentIndex + 1) % roles.length;
+  }
+
+  setInterval(updateRole, 3000);
+  updateRole(); 
+});
+
+
+
+//Observer API
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("nav ul li a");
+  const sections = document.querySelectorAll("section");
+
+  let timeoutId;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const isActive = entry.isIntersecting;
+
+      if (isActive) {
+        clearTimeout(timeoutId);
+
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+
+        timeoutId = setTimeout(() => {
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+          });
+        }, 2000); //delay
+      } else {
+        clearTimeout(timeoutId);
+      }
+    });
+  }, { threshold: 0.7 });
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+
+// Memes
+// Meme I
+
+document.addEventListener("DOMContentLoaded", function() {
+  const myElement = document.getElementById("pp");
+  let clickCount = 0;
+
+
+  myElement.addEventListener("click", function() {
+    clickCount++;
+    if (clickCount === 2) {
+      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+      clickCount = 0;
+    }
+    setTimeout(function() {
+      clickCount = 0;
+    }, 500);
+  });
+
+  myElement.addEventListener("contextmenu", function(event) {
+    event.preventDefault(); 
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  });
+});
+
+
+//Meme II
+document.addEventListener("DOMContentLoaded", function() {
+  let clickCount = 0;
+  let clickTimer;
+
+  document.addEventListener("click", function() {
+    clickCount++;
+    clearTimeout(clickTimer); 
+    clickTimer = setTimeout(() => {
+      clickCount = 0; 
+    }, 2000);
+
+    if (clickCount >= 15) {
+      for (let i = 0; i < 50; i++) {
+        setTimeout(createRandomImage, i * 50);
+      }
+      clickCount = 0;
+    }
+  });
+
+  function createRandomImage() {
+    const img = document.createElement("img");
+    img.src = "/public/assets/img/karamel.jpg";
+    img.style.position = "absolute";
+    img.style.width = `${getRandomSize(100, 500)}px`;
+    img.style.height = "auto";
+    img.style.top = `${getRandomPosition(1920)}px`;
+    img.style.left = `${getRandomPosition(1080)}px`;
+    img.style.zIndex = 999;
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+      img.remove();
+    }, 9000); 
+  }
+
+  function getRandomSize(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function getRandomPosition(max) {
+    return Math.floor(Math.random() * max);
+  }
+});
+
+
+//Meme III
+
+document.addEventListener("DOMContentLoaded", function() {
+  let konamiCode = [];
+  const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+  const konamiMessage = "Hile Aktif Edildi!";
+
+  document.addEventListener("keydown", function(event) {
+    konamiCode.push(event.key);
+    konamiCode = konamiCode.slice(-konamiSequence.length);
+
+    if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+      activateKonamiEgg();
+    }
+  });
+
+  function activateKonamiEgg() {
+    alert(konamiMessage);
+  }
+});
+
+//Meme IV
+document.getElementById('taxi').addEventListener('click', function() {
+  var videoUrl = 'https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1&vq=hd2160';
+
+  // Tam ekran fonksiyonu
+  function openFullscreen(element) {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { // firefox
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { //chromium
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { //edge
+          element.msRequestFullscreen();
+      }
+  }
+
+  var videoDiv = document.createElement('div');
+  videoDiv.style.position = 'fixed';
+  videoDiv.style.top = '0';
+  videoDiv.style.left = '0';
+  videoDiv.style.width = '100%';
+  videoDiv.style.height = '100%';
+  videoDiv.style.zIndex = '1000';
+  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('src', videoUrl);
+  iframe.setAttribute('width', '100%');
+  iframe.setAttribute('height', '100%');
+  iframe.setAttribute('allow', 'autoplay; fullscreen');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allowfullscreen', '');
+
+  videoDiv.appendChild(iframe);
+  document.body.appendChild(videoDiv);
+
+  // tam ekran
+  openFullscreen(videoDiv);
+
+  videoDiv.addEventListener('click', function() {
+      document.body.removeChild(videoDiv);
+  });
+  document.addEventListener('keydown', function(event) {
+    document.body.removeChild(videoDiv);
+}, { once: true });
+});
+
+//Meme V
+document.getElementById('pyramid').addEventListener('click', function() {
+  var videoUrl = 'https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1&vq=hd2160';
+
+  // tam ekran fonksiyonu
+  function openFullscreen(element) {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { // firefox
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { //chromium
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { //edge
+          element.msRequestFullscreen();
+      }
+  }
+
+  var videoDiv = document.createElement('div');
+  videoDiv.style.position = 'fixed';
+  videoDiv.style.top = '0';
+  videoDiv.style.left = '0';
+  videoDiv.style.width = '100%';
+  videoDiv.style.height = '100%';
+  videoDiv.style.zIndex = '1000';
+  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('src', videoUrl);
+  iframe.setAttribute('width', '100%');
+  iframe.setAttribute('height', '100%');
+  iframe.setAttribute('allow', 'autoplay; fullscreen');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allowfullscreen', '');
+
+  videoDiv.appendChild(iframe);
+  document.body.appendChild(videoDiv);
+
+  // tam ekran
+  openFullscreen(videoDiv);
+
+  videoDiv.addEventListener('click', function() {
+      document.body.removeChild(videoDiv);
+  });
+  document.addEventListener('keydown', function(event) {
+    document.body.removeChild(videoDiv);
+}, { once: true });
+});
+//Meme VI
+document.getElementById('dansedenkurbaga').addEventListener('click', function() {
+  var videoUrl = 'https://www.youtube.com/embed/zbh5YUax0uc?autoplay=1&fs=1&vq=hd2160';
+
+  function openFullscreen(element) {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { // firefox
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { // chromium
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { // edge
+          element.msRequestFullscreen();
+      }
+  }
+
+  var videoDiv = document.createElement('div');
+  videoDiv.style.position = 'fixed';
+  videoDiv.style.top = '0';
+  videoDiv.style.left = '0';
+  videoDiv.style.width = '100%';
+  videoDiv.style.height = '100%';
+  videoDiv.style.zIndex = '1000';
+  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('src', videoUrl);
+  iframe.setAttribute('width', '100%');
+  iframe.setAttribute('height', '100%');
+  iframe.setAttribute('allow', 'autoplay; fullscreen');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allowfullscreen', '');
+
+  videoDiv.appendChild(iframe);
+  document.body.appendChild(videoDiv);
+
+  // tam ekran yap
+  openFullscreen(videoDiv);
+
+  videoDiv.addEventListener('click', function() {
+      document.body.removeChild(videoDiv);
+  });
+  document.addEventListener('keydown', function(event) {
+      document.body.removeChild(videoDiv);
+  }, { once: true });
+});
+
+
+//mobil kontrol
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+/*function closeAlert() {
+  document.getElementById('mobileAlert').style.display = 'none';
+  document.getElementById('blur').style.display = 'none';
+}*/
+
+if (isMobile()) {
+  document.getElementById('mobile-overlay').style.display = 'block';
+  /*document.getElementById('blur').style.display = 'block';*/
+}
+
+
+// Plasenta Entertaiment Bildirim
+
+function showMessage(message) {
+  let messageDiv = document.createElement("div");
+  messageDiv.textContent = message;
+  messageDiv.style.fontFamily = "MonaSansMedium";
+  messageDiv.style.position = "fixed";
+  messageDiv.style.bottom = "20px";
+  messageDiv.style.right = "20px";
+  messageDiv.style.backgroundColor = "#080a0f52";
+  messageDiv.style.backdropFilter = "blur(10px)";
+  messageDiv.style.color = "#fff";
+  messageDiv.style.padding = "10px 20px";
+  messageDiv.style.borderRadius = "5px";
+  messageDiv.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+  messageDiv.style.zIndex = "1000";
+  messageDiv.style.opacity = "0";
+  messageDiv.style.transition = "opacity 0.5s ease-in-out";
+  document.body.appendChild(messageDiv);
+  setTimeout(() => { messageDiv.style.opacity = "1"; }, 100);
+  setTimeout(() => {
+      messageDiv.style.opacity = "0";
+      setTimeout(() => { document.body.removeChild(messageDiv); }, 500);
+  }, 3000);
+}
+document.getElementById("plasenta-footer").addEventListener("click", function(event) {
+  event.preventDefault();
+  showMessage("Plasenta.com is still under development.");
+});
+
+document.getElementById("plasenta").addEventListener("click", function(event) {
+  event.preventDefault();
+  showMessage("Plasenta.com is still under development.");
+});
