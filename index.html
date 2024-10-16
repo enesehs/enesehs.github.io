@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" property="og:title" content="enesehs.me">
+  <meta name="description" content="Enes, founder of Plasenta Entertainment, specializes in game development using Unreal Engine 5 and C++, creating immersive gaming experiences." />
+  <meta name="keywords" content="Enes, Enesehs, Portfolio, Game Development, Unreal Engine 5, C++, Plasenta Entertainment, Enesehs Windows Optimizer, Game Projects, Developer, Contact, Indie Games, Game Design, Programming, Unreal Engine Developer" />
+  <meta name="author" content="Enes Hacısağır">
   <title> Enesehs Portfolio</title>
   <link rel="icon" type="image/x-icon" href="public/favicon.ico">
   <link rel="stylesheet" href="./src/styles/gradient-bg.css">
@@ -64,7 +67,7 @@
       </div>
       <div class="vl"></div>
       <div class="center">
-        <p id="text">&quot;I'm Enes. My passion for game development started at a young age, fueled by my early
+        <p id="text">&quot; I'm Enes. My passion for game development started at a young age, fueled by my early
           experiences with programming. I'm the founder and lead developer of Plasenta Entertainment. I've completed
           multiple prestigious programs, including the Google Game and App Academy. Using Unreal Engine 5 and C++, I
           bring my imagination to life through game projects. My goal is to create unforgettable gaming experiences, and
@@ -73,6 +76,7 @@
 
           &quot;</p>
       </div>
+
       <ul class="social-icons">
         <li><a href="https://www.linkedin.com/in/enesehs/" id="linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
         </li>
@@ -132,8 +136,8 @@
       <input type="email" id="email" name="entry.1990805682" placeholder="Email" required oninput="toggleCaptcha()">
       <label for="message">Message</label>
       <textarea id="message" name="entry.2105838083" placeholder="" style="height:150px" required></textarea>
-      <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04"></div>
-      <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
+      <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04" data-theme="dark"></div>
+                                          <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
       <input type="submit" value="Submit">
     </form>
   </section>
@@ -191,7 +195,7 @@
     <p>&copy; 2024 Enesehs | All Rights Reserved</p>
     <img src="./public/assets/img/pyramid.png" draggable="false" id="pyramid" alt="SilentHill">
     <li id="Bug">
-      <a href="#" id="dansedenkurbaga">
+      <a id="dansedenkurbaga">
         <ion-icon name="bug-outline"></ion-icon>
       </a>
     </li>
@@ -210,27 +214,17 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
-    ScrollReveal().reveal('.contact-me', {
+    const revealOptions = {
       distance: '-30px',
       origin: 'bottom',
       duration: 1200,
       easing: 'ease-in-out',
       reset: false
-    });
-    ScrollReveal().reveal('.projects', {
-      distance: '-30px',
-      origin: 'bottom',
-      duration: 1200,
-      easing: 'ease-in-out',
-      reset: false
-    });
-    ScrollReveal().reveal('.about', {
-      distance: '-30px',
-      origin: 'bottom',
-      duration: 1200,
-      easing: 'ease-in-out',
-      reset: false
-    });
+    };
+
+    ScrollReveal().reveal('.contact-me', revealOptions);
+    ScrollReveal().reveal('.projects', revealOptions);
+    ScrollReveal().reveal('.about', revealOptions);
   </script>
 </body>
 

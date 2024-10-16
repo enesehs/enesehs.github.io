@@ -1,1 +1,99 @@
-let isCaptchaVisible=!0;function showCaptcha(){let e=document.querySelector(".h-captcha");isCaptchaVisible||(e.style.display="block",isCaptchaVisible=!0)}function toggleCaptcha(){let e=document.getElementById("email").value,t=document.querySelector(".h-captcha");e.includes("@")?(t.style.display="block",t.style.opacity="1"):(t.style.opacity="0",setTimeout(()=>{hcaptcha.reset(),isCaptchaVisible=!1},3e4))}function showAlert(e,t=!1){let a=document.createElement("div");a.textContent=e,a.style.position="fixed",a.style.top="20px",a.style.left="50%",a.style.transform="translateX(-50%)",a.style.backgroundColor=t?"#4CAF50":"#f44336",a.style.color="#fff",a.style.padding="10px 20px",a.style.borderRadius="5px",a.style.boxShadow="0 2px 10px rgba(0, 0, 0, 0.1)",a.style.zIndex="1000",document.body.appendChild(a),setTimeout(()=>{a.style.transition="opacity 0.5s",a.style.opacity="0",setTimeout(()=>{document.body.removeChild(a)},500)},3e3)}function validateCaptcha(){return!!hcaptcha.getResponse()||(showAlert("Please complete the hCaptcha"),!1)}function validateForm(e){return(e.preventDefault(),isCaptchaVisible)?!!validateCaptcha()&&void submitForm(e):(showCaptcha(),!1)}function submitForm(){let e=document.getElementById("contact-form"),t=new FormData(e);validateCaptcha()&&fetch("https://docs.google.com/forms/d/e/1FAIpQLSfq7qrgGaoaFv18VVC-ZFeFeq4o9YpuNRUds3yfCxKU6S0Tow/formResponse",{method:"POST",body:t,mode:"no-cors"}).then(()=>{showAlert("Form submitted successfully!",!0),e.reset(),isCaptchaVisible=!0,hcaptcha.reset()}).catch(()=>{showAlert("There was an error submitting the form."),e.reset(),isCaptchaVisible=!0,hcaptcha.reset()})}document.getElementById("contact-form").addEventListener("submit",validateForm);
+let isCaptchaVisible = false;
+
+function showCaptcha() {
+    const captchaElement = document.querySelector(".h-captcha");
+    if (!isCaptchaVisible) {
+        captchaElement.style.display = "block";
+        isCaptchaVisible = true;
+    }
+}
+
+function toggleCaptcha() {
+    const emailValue = document.getElementById("email").value;
+    const captchaElement = document.querySelector(".h-captcha");
+
+    if (emailValue.includes("@")) {
+        captchaElement.style.display = "block";
+        captchaElement.style.opacity = "1";
+    } else {
+        captchaElement.style.opacity = "0";
+        setTimeout(() => {
+            hcaptcha.reset();
+            isCaptchaVisible = false;
+        }, 30000);
+    }
+}
+
+function showAlert(message, isSuccess = false) {
+    const alertElement = document.createElement("div");
+    alertElement.textContent = message;
+    Object.assign(alertElement.style, {
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        backgroundColor: isSuccess ? "#4CAF5044" : "#f4433644",
+        backdropFilter: "blur(10px)",
+        color: "#fff",
+        padding: "10px 20px",
+        borderRadius: "5px",
+        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+        zIndex: "1000",
+        transition: "opacity 0.5s"
+    });
+
+    document.body.appendChild(alertElement);
+
+    setTimeout(() => {
+        alertElement.style.opacity = "0";
+        setTimeout(() => {
+            document.body.removeChild(alertElement);
+        }, 500);
+    }, 3000);
+}
+
+function validateCaptcha() {
+    if (!hcaptcha.getResponse()) {
+        showAlert("Please complete the hCaptcha");
+        return false;
+    }
+    return true;
+}
+
+function validateForm(event) {
+    event.preventDefault();
+    if (isCaptchaVisible) {
+        if (validateCaptcha()) {
+            submitForm();
+        }
+    } else {
+        showCaptcha();
+    }
+}
+
+function submitForm() {
+    const formElement = document.getElementById("contact-form");
+    const formData = new FormData(formElement);
+
+    if (validateCaptcha()) {
+        fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSfq7qrgGaoaFv18VVC-ZFeFeq4o9YpuNRUds3yfCxKU6S0Tow/formResponse",
+            { method: "POST", body: formData, mode: "no-cors" }
+        )
+            .then(() => {
+                showAlert("Form submitted successfully!", true);
+                formElement.reset();
+                isCaptchaVisible = false;
+                hcaptcha.reset();
+            })
+            .catch(() => {
+                showAlert("There was an error submitting the form.");
+                formElement.reset();
+                isCaptchaVisible = false;
+                hcaptcha.reset();
+            });
+    }
+}
+
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", validateForm);

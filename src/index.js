@@ -1,53 +1,60 @@
 //Gradient BG
 document.addEventListener("DOMContentLoaded", () => {
-  let interactiveElement = document.querySelector(".interactive"),
+  const interactiveElement = document.querySelector(".interactive"),
     toggleButton = document.getElementById("toggleButton"),
-    x = 0,
+    stopButton = document.getElementById("disable-effects-btn"),
+    gradientsContainerElement = document.querySelector(".gradients-container");
+
+  let x = 0,
     y = 0,
     targetX = 0,
     targetY = 0,
-    trackingEnabled = true;
+    trackingEnabled = true,
+    animationRunning = true;
 
   interactiveElement.style.transition = "opacity 0.7s ease-in-out";
 
-  let animate = () => {
-    x += (targetX - x) / 20;
-    y += (targetY - y) / 20;
+  const animate = () => {
+    if (!animationRunning) return;
+    x += (targetX - x) / 30;
+    y += (targetY - y) / 30;
     interactiveElement.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
     requestAnimationFrame(animate);
   };
 
-  let handleMouseMove = (event) => {
+  const handleMouseMove = (event) => {
     if (!trackingEnabled) return;
-    let pageX = window.pageXOffset,
+    const pageX = window.pageXOffset,
       pageY = window.pageYOffset;
     targetX = event.clientX + pageX;
     targetY = event.clientY + pageY;
   };
 
-  function showMessage(message) {
-    let messageDiv = document.createElement("div");
+  const showMessage = (message) => {
+    const messageDiv = document.createElement("div");
     messageDiv.textContent = message;
-    messageDiv.style.fontFamily = "MonaSansMedium";
-    messageDiv.style.position = "fixed";
-    messageDiv.style.bottom = "20px";
-    messageDiv.style.right = "20px";
-    messageDiv.style.backgroundColor = "#080a0f52";
-    messageDiv.style.backdropFilter = "blur(10px)";
-    messageDiv.style.color = "#fff";
-    messageDiv.style.padding = "10px 20px";
-    messageDiv.style.borderRadius = "5px";
-    messageDiv.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
-    messageDiv.style.zIndex = "1000";
-    messageDiv.style.opacity = "0";
-    messageDiv.style.transition = "opacity 0.5s ease-in-out";
+    Object.assign(messageDiv.style, {
+      fontFamily: "MonaSansMedium",
+      position: "fixed",
+      bottom: "20px",
+      right: "20px",
+      backgroundColor: "#080a0f52",
+      backdropFilter: "blur(10px)",
+      color: "#fff",
+      padding: "10px 20px",
+      borderRadius: "5px",
+      boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
+      zIndex: "1000",
+      opacity: "0",
+      transition: "opacity 0.5s ease-in-out",
+    });
     document.body.appendChild(messageDiv);
     setTimeout(() => { messageDiv.style.opacity = "1"; }, 100);
     setTimeout(() => {
       messageDiv.style.opacity = "0";
       setTimeout(() => { document.body.removeChild(messageDiv); }, 500);
     }, 3000);
-  }
+  };
 
   window.addEventListener("mousemove", handleMouseMove);
 
@@ -57,16 +64,29 @@ document.addEventListener("DOMContentLoaded", () => {
     showMessage(trackingEnabled ? "Tracking is ON" : "Tracking is OFF");
   });
 
+  if (stopButton) {
+    stopButton.addEventListener("click", () => {
+      animationRunning = !animationRunning;
+      trackingEnabled = animationRunning;
+      showMessage(animationRunning ? "Animation is ON" : "Animation is OFF");
+      interactiveElement.style.display = "none";
+      gradientsContainerElement.style.display = "none";
+    });
+  }
+
   animate();
 });
 
 
 //scroll
-type="text/javascript">
-window.addEventListener("scroll", function(){
-var header = document.querySelector("header");
-header.classList.toggle("sticky", window.scrollY > 2);
-})
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 2) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
 
 //Roll Text Anim
 document.addEventListener("DOMContentLoaded", function () {
@@ -129,26 +149,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Memes
-// Meme I
 
+
+// Meme I
 document.addEventListener("DOMContentLoaded", function() {
   const myElement = document.getElementById("pp");
   let clickCount = 0;
+  let clickTimeout;
 
+  const handleDoubleClick = () => {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    clickCount = 0;
+  };
 
   myElement.addEventListener("click", function() {
     clickCount++;
+    clearTimeout(clickTimeout);
     if (clickCount === 2) {
-      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
-      clickCount = 0;
+      handleDoubleClick();
+    } else {
+      clickTimeout = setTimeout(() => {
+        clickCount = 0;
+      }, 500);
     }
-    setTimeout(function() {
-      clickCount = 0;
-    }, 500);
   });
 
   myElement.addEventListener("contextmenu", function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
   });
 });
@@ -201,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Meme III
-
 document.addEventListener("DOMContentLoaded", function() {
   let konamiCode = [];
   const konamiSequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
@@ -221,24 +247,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-//Meme IV
-document.getElementById('taxi').addEventListener('click', function() {
-  var videoUrl = 'https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1&vq=hd2160';
-
-  // Tam ekran fonksiyonu
-  function openFullscreen(element) {
-      if (element.requestFullscreen) {
-          element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) { // firefox
-          element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) { //chromium
-          element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) { //edge
-          element.msRequestFullscreen();
-      }
-  }
-
-  var videoDiv = document.createElement('div');
+// Helper function to create and display video in fullscreen
+function createFullscreenVideo(videoUrl) {
+  const videoDiv = document.createElement('div');
   videoDiv.style.position = 'fixed';
   videoDiv.style.top = '0';
   videoDiv.style.left = '0';
@@ -247,7 +258,7 @@ document.getElementById('taxi').addEventListener('click', function() {
   videoDiv.style.zIndex = '1000';
   videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
 
-  var iframe = document.createElement('iframe');
+  const iframe = document.createElement('iframe');
   iframe.setAttribute('src', videoUrl);
   iframe.setAttribute('width', '100%');
   iframe.setAttribute('height', '100%');
@@ -258,109 +269,39 @@ document.getElementById('taxi').addEventListener('click', function() {
   videoDiv.appendChild(iframe);
   document.body.appendChild(videoDiv);
 
-  // tam ekran
-  openFullscreen(videoDiv);
-
-  videoDiv.addEventListener('click', function() {
-      document.body.removeChild(videoDiv);
-  });
-  document.addEventListener('keydown', function(event) {
-    document.body.removeChild(videoDiv);
-}, { once: true });
-});
-
-//Meme V
-document.getElementById('pyramid').addEventListener('click', function() {
-  var videoUrl = 'https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1&vq=hd2160';
-
-  // tam ekran fonksiyonu
+  // Fullscreen function
   function openFullscreen(element) {
-      if (element.requestFullscreen) {
-          element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) { // firefox
-          element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) { //chromium
-          element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) { //edge
-          element.msRequestFullscreen();
-      }
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chromium
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // Edge
+      element.msRequestFullscreen();
+    }
   }
 
-  var videoDiv = document.createElement('div');
-  videoDiv.style.position = 'fixed';
-  videoDiv.style.top = '0';
-  videoDiv.style.left = '0';
-  videoDiv.style.width = '100%';
-  videoDiv.style.height = '100%';
-  videoDiv.style.zIndex = '1000';
-  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-
-  var iframe = document.createElement('iframe');
-  iframe.setAttribute('src', videoUrl);
-  iframe.setAttribute('width', '100%');
-  iframe.setAttribute('height', '100%');
-  iframe.setAttribute('allow', 'autoplay; fullscreen');
-  iframe.setAttribute('frameborder', '0');
-  iframe.setAttribute('allowfullscreen', '');
-
-  videoDiv.appendChild(iframe);
-  document.body.appendChild(videoDiv);
-
-  // tam ekran
   openFullscreen(videoDiv);
 
-  videoDiv.addEventListener('click', function() {
-      document.body.removeChild(videoDiv);
-  });
-  document.addEventListener('keydown', function(event) {
-    document.body.removeChild(videoDiv);
-}, { once: true });
+  const removeVideoDiv = () => document.body.removeChild(videoDiv);
+  videoDiv.addEventListener('click', removeVideoDiv);
+  document.addEventListener('keydown', removeVideoDiv, { once: true });
+}
+
+// Meme IV
+document.getElementById('taxi').addEventListener('click', () => {
+  createFullscreenVideo('https://www.youtube.com/embed/1kvZ25qLWqA?autoplay=1&fs=1&vq=hd2160');
 });
-//Meme VI
-document.getElementById('dansedenkurbaga').addEventListener('click', function() {
-  var videoUrl = 'https://www.youtube.com/embed/zbh5YUax0uc?autoplay=1&fs=1&vq=hd2160';
 
-  function openFullscreen(element) {
-      if (element.requestFullscreen) {
-          element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) { // firefox
-          element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) { // chromium
-          element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) { // edge
-          element.msRequestFullscreen();
-      }
-  }
+// Meme V
+document.getElementById('pyramid').addEventListener('click', () => {
+  createFullscreenVideo('https://www.youtube.com/embed/O4JHaELSZ3o?autoplay=1&fs=1&vq=hd2160');
+});
 
-  var videoDiv = document.createElement('div');
-  videoDiv.style.position = 'fixed';
-  videoDiv.style.top = '0';
-  videoDiv.style.left = '0';
-  videoDiv.style.width = '100%';
-  videoDiv.style.height = '100%';
-  videoDiv.style.zIndex = '1000';
-  videoDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-
-  var iframe = document.createElement('iframe');
-  iframe.setAttribute('src', videoUrl);
-  iframe.setAttribute('width', '100%');
-  iframe.setAttribute('height', '100%');
-  iframe.setAttribute('allow', 'autoplay; fullscreen');
-  iframe.setAttribute('frameborder', '0');
-  iframe.setAttribute('allowfullscreen', '');
-
-  videoDiv.appendChild(iframe);
-  document.body.appendChild(videoDiv);
-
-  // tam ekran yap
-  openFullscreen(videoDiv);
-
-  videoDiv.addEventListener('click', function() {
-      document.body.removeChild(videoDiv);
-  });
-  document.addEventListener('keydown', function(event) {
-      document.body.removeChild(videoDiv);
-  }, { once: true });
+// Meme VI
+document.getElementById('dansedenkurbaga').addEventListener('click', () => {
+  createFullscreenVideo('https://www.youtube.com/embed/zbh5YUax0uc?autoplay=1&fs=1&vq=hd2160');
 });
 
 
@@ -379,37 +320,100 @@ if (isMobile()) {
 }
 
 
-// Plasenta Entertaiment Bildirim
+//Potato Detector
+function detectPotato() {
+  let fps = 0;
+  let lastFrameTime = performance.now();
+  let lowFpsCount = 0;
 
+  function calculateFPS() {
+    const now = performance.now();
+    fps = 1000 / (now - lastFrameTime);
+    lastFrameTime = now;
+
+    if (fps < 10) {
+      lowFpsCount++;
+      if (lowFpsCount >= 10) {
+        showPotatoMessage();
+        return;
+      }
+    } else {
+      lowFpsCount = 0;
+    }
+
+    requestAnimationFrame(calculateFPS);
+  }
+
+  requestAnimationFrame(calculateFPS);
+}
+
+function showPotatoMessage() {
+  const messageDiv = document.createElement("div");
+  messageDiv.innerHTML = `
+    <h3>🥔 Potato detected! Your browser is running slower than a potato! 🥔</h3>
+    <p>For a better experience, consider upgrading your GPU or enable hardware acceleration.</p>`;
+  Object.assign(messageDiv.style, {
+    fontFamily: "MonaSansMedium",
+    position: "fixed",
+    textAlign: "center",
+    bottom: "20px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    backgroundColor: "rgba(100, 100, 100, 0.15)",
+    border: "2px solid rgba(100, 100, 100, 0.54)",
+    backdropFilter: "blur(10px)",
+    color: "#fff",
+    padding: "20px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+    zIndex: "1000",
+  });
+  document.body.appendChild(messageDiv);
+
+  disableVisualEffects();
+}
+
+function disableVisualEffects() {
+  animationRunning = false;
+  trackingEnabled = false;
+  document.querySelector(".interactive").style.display = "none";
+  document.querySelector(".gradients-container").style.display = "none";
+}
+
+window.onload = detectPotato;
+
+
+
+// Plasenta Entertaiment Bildirim
 function showMessage(message) {
-  let messageDiv = document.createElement("div");
+  const messageDiv = document.createElement("div");
+  Object.assign(messageDiv.style, {
+    fontFamily: "MonaSansMedium",
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    backgroundColor: "#080a0f52",
+    backdropFilter: "blur(10px)",
+    color: "#fff",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
+    zIndex: "1000",
+    opacity: "0",
+    transition: "opacity 0.5s ease-in-out",
+  });
   messageDiv.textContent = message;
-  messageDiv.style.fontFamily = "MonaSansMedium";
-  messageDiv.style.position = "fixed";
-  messageDiv.style.bottom = "20px";
-  messageDiv.style.right = "20px";
-  messageDiv.style.backgroundColor = "#080a0f52";
-  messageDiv.style.backdropFilter = "blur(10px)";
-  messageDiv.style.color = "#fff";
-  messageDiv.style.padding = "10px 20px";
-  messageDiv.style.borderRadius = "5px";
-  messageDiv.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
-  messageDiv.style.zIndex = "1000";
-  messageDiv.style.opacity = "0";
-  messageDiv.style.transition = "opacity 0.5s ease-in-out";
   document.body.appendChild(messageDiv);
   setTimeout(() => { messageDiv.style.opacity = "1"; }, 100);
   setTimeout(() => {
-      messageDiv.style.opacity = "0";
-      setTimeout(() => { document.body.removeChild(messageDiv); }, 500);
+    messageDiv.style.opacity = "0";
+    setTimeout(() => { document.body.removeChild(messageDiv); }, 500);
   }, 3000);
 }
-document.getElementById("plasenta-footer").addEventListener("click", function(event) {
-  event.preventDefault();
-  showMessage("Plasenta.com is still under development.");
-});
 
-document.getElementById("plasenta").addEventListener("click", function(event) {
-  event.preventDefault();
-  showMessage("Plasenta.com is still under development.");
+["plasenta-footer", "plasenta"].forEach(id => {
+  document.getElementById(id).addEventListener("click", function(event) {
+    event.preventDefault();
+    showMessage("Plasenta.com is still under development.");
+  });
 });
