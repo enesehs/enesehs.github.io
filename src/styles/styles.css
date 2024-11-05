@@ -296,7 +296,7 @@
   top:50%;
   left:85%;
   transform:translate(-50%,-50%);
-  z-index:0
+
   }
   
   #ball {
@@ -305,7 +305,7 @@
   position:absolute;
   top:35%;
   left:75%;
-  transform:translate(-50%,-50%)
+  transform:translate(-50%,-50%);
   }
   
   #x {

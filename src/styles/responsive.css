@@ -144,3 +144,52 @@
     }
 
 }
+
+@media screen and (max-width: 1150px)
+{
+    .content h1 {
+        font-size: 60px;
+        left: 520px !important;
+    }
+    .content p {
+        font-size:16px;
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 1286px){
+    .content h1 {
+        font-size: 50px;
+    }
+    .content p {
+        font-size:13px;
+        width: 600px;
+    }
+    #pp {
+        width:280px;
+        top:50%;
+        left:85%;
+        transform:translate(-50%,-50%);
+        z-index:0
+        }
+        
+        #ball {
+        width:80px;
+        top:35%;
+        left:75%;
+        transform:translate(-50%,-50%)
+        }
+        
+        #x {
+        width:20px;
+        top:70%;
+        left:95%;
+        transform:translate(-50%,-50%)
+        }
+        .social-icons a {
+        font-size:30px;
+        }
+        #plasenta{
+            height: 30px;
+        }
+}
