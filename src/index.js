@@ -16,18 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animate = () => {
     if (!animationRunning) return;
-    x += (targetX - x) / 30;
-    y += (targetY - y) / 30;
+    x += (targetX - x) * 0.033;
+    y += (targetY - y) * 0.033;
     interactiveElement.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
     requestAnimationFrame(animate);
   };
 
   const handleMouseMove = (event) => {
     if (!trackingEnabled) return;
-    const pageX = window.pageXOffset,
-      pageY = window.pageYOffset;
-    targetX = event.clientX + pageX;
-    targetY = event.clientY + pageY;
+    targetX = event.clientX + window.pageXOffset;
+    targetY = event.clientY + window.pageYOffset;
   };
 
   const showMessage = (message) => {
@@ -287,6 +285,7 @@ function createFullscreenVideo(videoUrl) {
   const removeVideoDiv = () => document.body.removeChild(videoDiv);
   videoDiv.addEventListener('click', removeVideoDiv);
   document.addEventListener('keydown', removeVideoDiv, { once: true });
+  document.addEventListener('touchstart', removeVideoDiv, { once: true });
 }
 
 // Meme IV
@@ -331,7 +330,7 @@ function detectPotato() {
     fps = 1000 / (now - lastFrameTime);
     lastFrameTime = now;
 
-    if (fps < 10) {
+    if (fps < 16) {
       lowFpsCount++;
       if (lowFpsCount >= 10) {
         showPotatoMessage();

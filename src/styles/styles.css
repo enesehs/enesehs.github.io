@@ -306,6 +306,7 @@
   top:35%;
   left:75%;
   transform:translate(-50%,-50%);
+  z-index: 2;
   }
   
   #x {
