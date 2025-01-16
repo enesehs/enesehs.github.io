@@ -147,8 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Memes
-
-
 // Meme I
 document.addEventListener("DOMContentLoaded", function() {
   const myElement = document.getElementById("pp");

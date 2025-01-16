@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="./src/styles/gradient-bg.css">
   <link rel="stylesheet" href="./src/styles/styles.css">
   <link rel="stylesheet" href="./src/styles/responsive.css">
-  <link rel="stylesheet" href="./src/styles/winter.css">
 </head>
 <div id="mobile-overlay">
   <div class="overlay-content">
@@ -48,7 +47,7 @@
 <body>
   <header>
     <a href="#" class="logo">
-      <img src="./public/assets/logo/enesehsdevwinterpng.png" draggable="false">
+      <img src="./public/assets/logo/enesehsdev.png" draggable="false">
     </a>
     <nav>
       <ul>
@@ -128,18 +127,44 @@
   <section class="projects" id="projects">
     <h1>My Projects</h1>
     <img src="./public/assets/img/left arrow big.png" draggable="false" id="arrow">
-    <div class="project" id="proj1">
-      <a href="https://github.com/enesehs/enesehs-windows-optimizer">
-        <h3>Enesehs's Windows Optimizer</h3>
+    <div class="project-container">
+      <div class="project" id="proj1">
+        <a href="https://github.com/enesehs/enesehs-windows-optimizer">
+          <div class="project-content">
+            <h3>Enesehs's Windows Optimizer</h3>
+            <p class="project-description">A powerful Windows optimization tool</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Batch</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="project" id="proj2">
+        <div class="project-content">
+          <h3>Project FSA <img src="./public/assets/logo/Unreal.png" style="filter: invert(1);" draggable="false" id="unreal"></h3>
+          <p class="project-description">Coming Soon</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Unreal Engine 5</span>
+            <span class="tech-tag">C++</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project" id="proj3">
+        <a href="https://enesehs.me/Aether">
+        <div class="project-content">
+          <h3>Project Aether <img src="./public/assets/logo/Aether.png" draggable="false" id="aether"></h3>
+            <p class="project-description">An open-source webcam security tool that captures and encrypts photos during system access attempts, providing offline monitoring and privacy.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Tkinter</span>
+          </div>
+        </div>
+      </div>
       </a>
     </div>
-    <div class="project" id="proj2">
-      <h3>Project FSA <img src="./public/assets/logo/Unreal.png" draggable="false" id="unreal"></h3>
-    </div>
-    <div class="project" id="proj3">
-      <h3>Project Horror <img src="./public/assets/logo/Unity.png" draggable="false" id="unity"></h3>
-    </div>
-  </section>
+  </section></div>
 
   <section class="contact-me" id="contact">
     <h2>Contact Me</h2>
@@ -155,7 +180,6 @@
       <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04" data-theme="dark"></div>
       <!--işine yaramaz boş yere uğraşma (❁´◡`❁)-->
       <input type="submit" value="Submit">
-      <img src="./public/assets/img/kar3.png" id="kar3" draggable="false">
     </form>
   </section>
   <div class="gradient-bg">
@@ -184,12 +208,6 @@
     </div>
   </div>
   <click-spark></click-spark>
-  <audio id="winterMusic" src="./public/assets/music/winter.mp3" autoplay></audio>
-  <div class="snowstage">
-    <img src="./public/assets/img/kar1.png" id="kar1" draggable="false">
-    <img src="./public/assets/img/kar4.png" id="kar4" draggable="false">
-    <canvas id="stage"></canvas>
-  </div>
   <footer>
     <div class="waves">
       <div class="wave" id="wave1"></div>
@@ -230,7 +248,6 @@
   <script src="./src/index.js"></script>
   <script src="./src/utils/lang.js"></script>
   <script src="./src/utils/clickspark.js"></script>
-  <script src="./src/utils/winter.js"></script>
   <script src="https://hcaptcha.com/1/api.js" async defer></script>
   <script src="./src/utils/captcha.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -238,16 +255,51 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
     const revealOptions = {
-      distance: '-30px',
-      origin: 'bottom',
-      duration: 1200,
-      easing: 'ease-in-out',
-      reset: false
+        distance: '50px',
+        duration: 1500,
+        easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        reset: false,
+        viewFactor: 0.2
     };
 
-    ScrollReveal().reveal('.contact-me', revealOptions);
-    ScrollReveal().reveal('.projects', revealOptions);
-    ScrollReveal().reveal('.about', revealOptions);
+  ScrollReveal().reveal('.content h1, p#text, .vl', {
+        ...revealOptions,
+        origin: 'left',
+        delay: 200,
+        scale: 0.85
+    });
+
+  ScrollReveal().reveal('#pp,#ball,#x', {
+    delay: 800,
+    origin: 'right',
+    scale: 0.85
+  });
+
+  ScrollReveal().reveal('.social-icons', {
+    delay: 1200,
+    origin: 'bottom',
+    distance: '100px',
+    scale: 0.85
+  });
+
+  ScrollReveal().reveal('.about, h1, #stroke', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom'
+  });
+
+  ScrollReveal().reveal('.projects', {
+    delay: 300,
+    distance: '50px', 
+    origin: 'left'
+  });
+
+  ScrollReveal().reveal('.contact-me', {
+    delay: 400,
+    distance: '50px',
+    origin: 'right'
+  });
+
   </script>
 </body>
 
