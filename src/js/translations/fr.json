@@ -1,0 +1,81 @@
+{
+  "meta_description": "Enes Hacısağır est le fondateur de Plasenta Entertainment. Il est développeur de jeux avec Unreal Engine, spécialisé dans Unreal Engine 5 et le développement en C++.",
+  
+  "nav_home": "Accueil",
+  "nav_projects": "Projets",
+  "nav_skills": "Compétences",
+  "nav_certificates": "Certificats",
+  "nav_about": "À propos",
+  "nav_contact": "Contact",
+  
+  "greeting": "Je suis",
+  "about_me": "\"Je suis le fondateur et développeur principal de Plasenta Entertainment. J'ai complété plusieurs programmes de développement de jeux, notamment la Google Game and App Academy. En utilisant Unreal Engine 5 et C++, je donne vie à mon imagination à travers des projets de jeux. Mon objectif est de créer des expériences de jeu inoubliables, et je m'engage à repousser les limites du développement de jeux. Si vous souhaitez collaborer avec moi dans ce parcours, n'hésitez pas à <a href='#contact' class='text-link'>me contacter</a>.\"",
+  
+  "learn_more": "En savoir plus",
+  "see_projects": "Voir mes projets",
+  
+  "projects_header": "Mes Projets",
+  "projects_subheader": "Voici quelques-uns de mes projets de développement de jeux et d'applications",
+  
+  "abandoned": "Abandonné",
+  "in_development": "En développement",
+  "gamejam": "GameJam de 24 heures",
+  "details": "Détails",
+  "trailer": "Bande-annonce",
+  "github": "Github",
+  "download": "Télécharger",
+  
+  "shatterpoint_desc": "Un jeu d'action-aventure à la première personne en 3D low poly se déroulant dans un monde de rêve. Les joueurs naviguent à travers divers environnements, résolvent des énigmes et s'engagent dans des combats tactiques avec des ressources limitées. Le jeu propose un cycle jour/nuit dynamique qui affecte le comportement des ennemis et les mécaniques de jeu.",
+  "fsa_desc": "Un jeu d'horreur psychologique atmosphérique avec des environnements dynamiques et un gameplay narratif offrant plusieurs fins basées sur les choix du joueur.",
+  "healer_desc": "Un jeu d'aventure mobile à défilement latéral, les joueurs récoltent des herbes et créent des sorts de guérison magiques. Développé en seulement 24 heures pour un gamejam OUA, avec des mécaniques de potions uniques et plusieurs niveaux difficiles avec une difficulté croissante.",
+  "aether_desc": "Aether est un outil de sécurité webcam open-source qui capture et crypte automatiquement des photos lors des tentatives d'accès au système. Fonctionnant entièrement hors ligne avec stockage local, il offre une façon simple mais puissante de surveiller et sécuriser votre système tout en maintenant une confidentialité complète.",
+  "ewo_desc": "L'Optimiseur Windows d'Enesehs est un outil léger open-source conçu pour améliorer les performances des systèmes d'exploitation Windows. Il optimise votre ordinateur en nettoyant les fichiers inutiles, en libérant de l'espace disque et en fournissant des ajustements Windows. Avec ce logiciel open-source, vous pouvez vous assurer que votre système Windows fonctionne sans problème et efficacement.",
+  "awms_desc": "whatsapp-automated-message-sender.py automatise l'envoi de messages à un groupe/utilisateur WhatsApp spécifique en utilisant Selenium WebDriver, permettant aux utilisateurs de communiquer efficacement via la plateforme.",
+  
+  "view_all_projects": "Voir tous les projets",
+  
+  "skills_header": "Mes Compétences",
+  "skills_subheader": "Technologies et langages avec lesquels je travaille",
+  
+  "unreal_desc": "Développement de jeux avec Unreal Engine, structures de données, algorithmes",
+  "cpp_desc": "Mécaniques de jeu, conception de niveaux, blueprints, intégration C++",
+  "python_desc": "Automatisation, analyse de données, applications GUI avec Tkinter",
+  "javascript_desc": "Développement web, fonctionnalités interactives, manipulation du DOM",
+  "html_css_desc": "Conception responsive, layouts modernes, animations",
+  "unity_desc": "Prototypage de jeux, développement mobile, intégration C#",
+  "git_desc": "Contrôle de version, collaboration, gestion de projet",
+  "sql_desc": "Conception de bases de données, requêtes, gestion des données",
+  
+  "certificates_header": "Mes Certificats",
+  "certificates_subheader": "Qualifications professionnelles et réalisations",
+  "see_all_certificates": "Voir tous les certificats",
+  
+  "about_header": "À Propos de Moi",
+  "about_subheader": "Faire connaissance avec Enesehs",
+  
+  "about_text": "Je suis Enes, un développeur de jeux de 20 ans dont la passion pour le développement de jeux a été façonnée par mes premières expériences avec la programmation. Je suis le fondateur et le développeur principal de Plasenta Entertainment. J'ai complété plusieurs programmes importants, notamment la Google Game and App Academy. En développant des projets avec Unreal Engine 5 et C++, je donne vie à mon imagination dans le monde du jeu vidéo. <br> Mon objectif est de créer des jeux de qualité AAA qui offrent aux joueurs des expériences inoubliables, et j'ai de grands rêves dans ce domaine. Si vous êtes intéressé à collaborer dans ce voyage, n'hésitez pas à me contacter.",
+  
+  "position": "Position Actuelle",
+  "position_value": "PDG et Programmeur Principal chez Plasenta Entertainment",
+  "specialization": "Spécialisation",
+  "specialization_value": "Focus sur Unreal Engine, C++ et Blueprint",
+  
+  "contact_me": "Me Contacter",
+  
+  "contact_header": "Me Contacter",
+  "contact_subheader": "Travaillons ensemble sur votre prochain projet",
+  
+  "email": "E-mail",
+  "location": "Localisation",
+  "location_value": "Istanbul, Turquie",
+  "social": "Réseaux Sociaux",
+  
+  "name": "Nom",
+  "name_placeholder": "Votre nom",
+  "email_placeholder": "Votre e-mail",
+  "message": "Message",
+  "message_placeholder": "Votre message",
+  "submit_form": "Envoyer le formulaire",
+  
+  "footer_copyright": "© 2025 Enesehs | Tous droits réservés"
+}
