@@ -59,5 +59,6 @@
     "message": "Mensaje",
     "message_placeholder": "Tu mensaje",
     "submit_form": "Enviar Formulario",
-    "footer_copyright": "© 2025 Enesehs | Todos los derechos reservados"
+    "footer_copyright": "© 2025 Enesehs | Todos los derechos reservados",
+    "language_label": "Idioma:"
 }

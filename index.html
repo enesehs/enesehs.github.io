@@ -44,18 +44,60 @@ Designed & Developed with by Enesehs
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#212121">
 
-    <!--MonaSans Medium Preload-->
-    <link rel="preload" href="/public/assets/font/MonaSans-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="/public/assets/font/MonaSans-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/public/assets/font/MonaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <!--MonaSans Expanded Regular Preload-->
-    <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.ttf" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <!-- Resource hints for performance -->
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//hcaptcha.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    
+    <!--MonaSans Optimized Preload - Only WOFF2 for better performance-->
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/src/css/style.min.css">
-    <link rel="stylesheet" href="/src/css/responsive.min.css">
-    <link rel="stylesheet" href="/src/css/gradient-bg.min.css">
+    
+    <!-- Preload critical LCP image -->
+    <link rel="preload" href="/public/assets/img/profile-pic.webp" as="image" type="image/webp">
+    
+    <!-- Inline critical CSS for immediate rendering -->
+    <style>
+        @font-face{font-family:MonaSansExpanded;src:url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2");font-display:swap}
+        :root{--dark:#212121;--white:#e8e8e8;--bg-empty:linear-gradient(40deg, #080a0f, #001120);--gradient:linear-gradient(90deg, #0066ff, #6b4aff, #6464ff, #32a0dc, #0066ff);--one-rgb:0,102,255;--two-rgb:107,74,255;--three-rgb:100,100,255;--four-rgb:50,160,220}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:MonaSansExpanded}
+        html{overflow-x:hidden;scroll-behavior:smooth}
+        body{min-height:100vh;color:var(--white);background:var(--bg-empty);overflow-x:hidden;width:100%}
+        header{position:fixed;width:100%;padding:25px 50px;transition:.6s ease;z-index:1000;top:0;left:0;box-sizing:border-box}
+        nav{display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;position:relative}
+        .logo img{height:40px;transition:.6s ease}
+        nav ul{display:flex;list-style:none;gap:35px;margin:0}
+        nav ul li a{text-decoration:none;color:var(--white);font-size:16px;font-weight:500;transition:all .3s ease;opacity:.75;position:relative;padding:5px 0}
+        .hero-wrapper{position:relative;min-height:100vh;width:100%;display:flex;align-items:center;justify-content:center;padding-top:20px}
+        .hero{width:100%;max-width:1200px;padding:0 40px;padding-top:100px;margin:0 auto;position:relative;z-index:10}
+        .hero-container{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+        .left-content{flex:1;min-width:300px;max-width:650px}
+        .title-container{margin-bottom:24px}
+        .greeting{color:var(--white);font-size:1.5rem;font-weight:400;margin-bottom:8px}
+        #Spinning-Text{font-size:4.2rem;font-weight:700;color:var(--white);margin-bottom:10px;white-space:nowrap}
+        .about-me{margin-bottom:32px;padding-right:20px;width:700px}
+        .about-me p{color:#fbfbfbb4;mix-blend-mode:lighten;font-size:1rem;line-height:1.8;font-weight:400}
+        .right-content{flex:1;min-width:300px;display:flex;justify-content:center;align-items:center;margin-right:-140px}
+        .profile-container{position:relative;width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center}
+        .profile-frame{position:relative;overflow:hidden;border-radius:200px;box-shadow:0 10px 30px rgba(0,0,0,.3);transform:perspective(1000px) rotateY(-5deg);transition:transform .5s ease;width:100%;margin-bottom:24px;contain:layout style paint}
+        #profile-pic{width:100%;height:auto;display:block;border-radius:200px;transition:transform .5s ease;contain:layout style paint}
+        .social-media{width:100%;display:flex;justify-content:center;margin-top:20px}
+        .social-icons{display:flex;list-style:none;gap:20px;justify-content:center;padding:0;flex-wrap:nowrap}
+        .social-icons li{transition:transform .3s ease}
+        .social-icons img{width:35px;height:auto;opacity:.7;transition:opacity .3s ease,transform .3s ease}
+        .social-icons img#youtube{width:44px}
+        .cta-btn{display:inline-block;padding:14px 32px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:30px;color:var(--white);text-decoration:none;font-size:1rem;font-weight:500;letter-spacing:.5px;transition:all .4s cubic-bezier(.175,.885,.32,1.275);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);position:relative;overflow:hidden;z-index:1}
+        .cta-btn:first-child{background:linear-gradient(135deg,rgba(var(--one-rgb),.2),rgba(var(--three-rgb),.2));border-color:rgba(var(--three-rgb),.4)}
+    </style>
+    
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="preload" href="/src/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/src/css/responsive.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/src/css/gradient-bg.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/src/css/style.min.css">
+        <link rel="stylesheet" href="/src/css/responsive.min.css">
+        <link rel="stylesheet" href="/src/css/gradient-bg.min.css">
+    </noscript>
     <link rel="icon" type="image/x-icon" href="public/favicon.ico">
 </head>
 
@@ -64,7 +106,7 @@ Designed & Developed with by Enesehs
     <header>
         <nav>
             <div class="logo">
-                <a href="#"><img src="/public/assets/img/enesehsdev.webp" alt="Enesehs Logo" draggable="false"></a>
+                <a href="#"><img src="/public/assets/img/enesehsdev.webp" alt="Enesehs Logo" draggable="false" loading="eager" decoding="async"></a>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -114,29 +156,37 @@ Designed & Developed with by Enesehs
                 <div class="right-content">
                     <div class="profile-container">
                         <div class="profile-frame">
-                            <img id="profile-pic" src="/public/assets/img/profile-pic.webp" draggable="false"
-                                alt="Enesehs" data-nosnippet>
+                            <img id="profile-pic" 
+                                 src="/public/assets/img/profile-pic.webp" 
+                                 alt="Enesehs" 
+                                 draggable="false"
+                                 data-nosnippet 
+                                 fetchpriority="high"
+                                 loading="eager"
+                                 decoding="sync"
+                                 width="400" 
+                                 height="400">
                         </div>
 
                         <div class="social-media">
                             <ul class="social-icons">
                                 <li><a href="https://www.linkedin.com/in/enesehs/" aria-label="LinkedIn"><img
                                             src="/public/assets/links/linkedin.webp" alt="LinkedIn" id="linkedin"
-                                            draggable="false"></a></li>
+                                            draggable="false" loading="lazy" decoding="async"></a></li>
                                 <li><a href="https://github.com/enesehs" aria-label="GitHub"><img
                                             src="/public/assets/links/github.webp" alt="GitHub" id="github"
-                                            draggable="false"></a></li>
+                                            draggable="false" loading="lazy" decoding="async"></a></li>
                                 <li><a href="#" aria-label="Plasenta"><img src="/public/assets/links/Plasenta.webp"
-                                            draggable="false" id="plasenta" alt="Plasenta"></a></li>
+                                            draggable="false" id="plasenta" alt="Plasenta" loading="lazy" decoding="async"></a></li>
                                 <li><a href="https://www.instagram.com/enesehs.dev/" aria-label="Instagram"><img
                                             src="/public/assets/links/instagram.webp" id="instagram" alt="Instagram"
-                                            draggable="false"></a></li>
+                                            draggable="false" loading="lazy" decoding="async"></a></li>
                                 <li><a href="https://open.spotify.com/user/21a6im72dymlsyyaasjejv2by?si=d8545eb4f9984aa4"
                                         aria-label="Spotify"><img src="/public/assets/links/spotify.webp" id="spotify"
-                                            alt="Spotify" draggable="false"></a></li>
+                                            alt="Spotify" draggable="false" loading="lazy" decoding="async"></a></li>
                                 <li><a href="https://www.youtube.com/@enesehs" aria-label="YouTube"><img
                                             src="/public/assets/links/youtube.webp" alt="YouTube" id="youtube"
-                                            draggable="false"></a></li>
+                                            draggable="false" loading="lazy" decoding="async"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -606,6 +656,21 @@ Designed & Developed with by Enesehs
             <li><a href="#about" data-i18n="nav_about">About</a></li>
             <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <label for="language-select" data-i18n="language_label">Language:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="tr">Türkçe</option>
+                <option value="es">Español</option>
+                <option value="zh">中文</option>
+                <option value="hi">हिन्दी</option>
+                <option value="fr">Français</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+        
         <p data-i18n="footer_copyright">&copy; 2025 Enesehs | All Rights Reserved</p>
     </footer>
     <div class="gradient-bg">
@@ -636,13 +701,26 @@ Designed & Developed with by Enesehs
         <script src="/src/js/script.js" defer></script>
         <script src="/src/js/gradient.js" defer></script>
         <script src="/src/js/content.js" defer></script>
+        <script src="/src/js/lazy-loading.js" defer></script>
+        <script src="/src/js/web-vitals.js" defer></script>
         <script type="module" src="/src/js/memes.js" defer></script>
-        <script src="/src/js/memes.js" async defer></script>
-        <script src="https://hcaptcha.com/1/api.js" async defer></script>
         <script src="/src/js/captcha.js" defer></script>
-        <script src="/src/js/clickspark.js" async defer></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/src/js/clickspark.js" defer></script>
+        <script src="https://unpkg.com/scrollreveal" defer></script>
         <script src="/src/js/language-detector.js" defer></script>
+        
+    
+        
+        <!-- Load hCaptcha asynchronously only when needed -->
+        <script>
+            if (document.querySelector('.h-captcha')) {
+                const script = document.createElement('script');
+                script.src = 'https://hcaptcha.com/1/api.js';
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
+        </script>
 </body>
 
 </html>
