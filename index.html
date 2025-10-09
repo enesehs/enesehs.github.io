@@ -21,7 +21,7 @@ Designed & Developed with by Enesehs
         data-i18n="meta_description" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://enesehs.me/" />
+    <meta property="og:url" content="https://enesehs.dev/" />
     <meta property="og:title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
     <meta property="og:description"
         content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development, "
@@ -32,7 +32,7 @@ Designed & Developed with by Enesehs
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://enesehs.me/" />
+    <meta property="twitter:url" content="https://enesehs.dev/" />
     <meta property="twitter:title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
     <meta property="twitter:description"
         content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development, "
@@ -43,6 +43,22 @@ Designed & Developed with by Enesehs
     <meta http-equiv="Cache-Control" content="max-age=31536000">
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#212121">
+    <meta name="color-scheme" content="dark">
+    <meta name="supported-color-schemes" content="dark">
+
+    <!-- Dark Reader hints -->
+    <meta name="darkreader-lock">
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+    </style>
 
     <!-- Resource hints for performance -->
     <link rel="dns-prefetch" href="//unpkg.com">
@@ -277,7 +293,7 @@ Designed & Developed with by Enesehs
                     <div class="project-links">
                         <a href="#" class="project-btn" data-i18n="details">Details</a>
                         <a href="https://github.com/enesehs/Aether" class="project-btn" data-i18n="github">Github</a>
-                        <a href="https://enesehs.me/Aether" class="project-btn" data-i18n="download">Download</a>
+                        <a href="https://enesehs.dev/Aether" class="project-btn" data-i18n="download">Download</a>
                     </div>
                 </div>
                 <div class="project-description">
@@ -330,6 +346,28 @@ Designed & Developed with by Enesehs
                     <p data-i18n="awms_desc">whatsapp-automated-message-sender.py automates sending messages to a specified WhatsApp
                         group/user using Selenium WebDriver, allowing users to communicate efficiently through the
                         platform.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/public/assets/projects/project7.webp" alt="USOM" draggable="false" data-nosnippet>
+                <div class="project-info-overlay">
+                    <h3>USOM Filter</h3>
+                    <div class="tag-container">
+                        <span>Python</span>
+                        <span>Aiohttp</span>
+                        <span>Tldextract</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn" data-i18n="details">Details</a>
+                        <a href="https://github.com/enesehs/usom-filter" class="project-btn" data-i18n="github">Github</a>
+                        <a href="https://enesehs.dev/usom-filter" class="project-btn" data-i18n="github">Website</a>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <button class="close-description"><span>&times;</span></button>
+                    <p data-i18n="usom_desc">This project converts the malicious URL list published by the Republic of Turkey Ministry of Transport and Infrastructure Cybersecurity Department (USOM) into suitable formats for various security tools.</p>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -708,6 +746,25 @@ Designed & Developed with by Enesehs
         <script src="/src/js/clickspark.js" defer></script>
         <script src="https://unpkg.com/scrollreveal" defer></script>
         <script src="/src/js/language-detector.js" defer></script>
+        
+        <!-- Dark Reader compatibility script -->
+        <script>
+            // Ensure Dark Reader recognizes the site as already dark
+            document.documentElement.setAttribute('data-color-scheme', 'dark');
+            document.documentElement.style.colorScheme = 'dark';
+            
+            // Disable Dark Reader if it's active
+            if (window.DarkReader) {
+                window.DarkReader.disable();
+            }
+            
+            // Set dark theme meta for compatibility
+            const meta = document.createElement('meta');
+            meta.name = 'theme-color';
+            meta.content = '#080a0f';
+            meta.setAttribute('media', '(prefers-color-scheme: dark)');
+            document.head.appendChild(meta);
+        </script>
         
     
         

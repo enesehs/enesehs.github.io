@@ -6,4 +6,4 @@ Disallow: /public/assets/certificates
 Allow: public/assets/img/enesehsdev.webp
 Allow: public/assets/img/meta.webp
 
-Sitemap: https://enesehs.me/sitemap.xml
+Sitemap: https://enesehs.dev/sitemap.xml

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'enesehs-v1';
+const CACHE_NAME = 'enesehs-v86';
 const urlsToCache = [
   '/',
   '/src/css/style.min.css',
