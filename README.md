@@ -9,7 +9,7 @@
 
 ## 📋 Overview
 
-This repository contains the source code for my personal portfolio website at [enesehs.me](https://enesehs.dev). The site showcases my game development projects, technical skills, and professional experience.
+This repository contains the source code for my personal portfolio website at [enesehs.dev](https://enesehs.dev). The site showcases my game development projects, technical skills, and professional experience.
 
 ![Website Preview](https://raw.githubusercontent.com/enesehs/enesehs.github.io/main/public/assets/img/meta.webp)
 
