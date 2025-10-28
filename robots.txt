@@ -1,9 +1,7 @@
 User-agent: *
 
 Disallow: /public/assets/
-Disallow: /public/assets/*
-Disallow: /public/assets/certificates
-Allow: public/assets/img/enesehsdev.webp
-Allow: public/assets/img/meta.webp
+Allow: /public/assets/img/enesehsdev.webp
+Allow: /public/assets/img/meta.webp
 
 Sitemap: https://enesehs.dev/sitemap.xml
