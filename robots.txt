@@ -1,7 +1,19 @@
 User-agent: *
+Allow: /
 
-Disallow: /public/assets/
+# Disallow specific directories
+Disallow: /public/assets/certificates/
+Disallow: /public/assets/font/
+Disallow: /public/assets/memes/
+
+# Allow important assets
+Allow: /public/assets/img/
 Allow: /public/assets/img/enesehsdev.webp
 Allow: /public/assets/img/meta.webp
+Allow: /public/assets/img/profile-pic.webp
 
+# Sitemap location
 Sitemap: https://enesehs.dev/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
