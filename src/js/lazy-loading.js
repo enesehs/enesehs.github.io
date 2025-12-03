@@ -9,17 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     img.removeAttribute('data-src');
                 }
                 
+                if (img.dataset.srcset) {
+                    img.srcset = img.dataset.srcset;
+                    img.removeAttribute('data-srcset');
+                }
+                
                 img.classList.add('loaded');
                 
                 observer.unobserve(img);
             }
         });
     }, {
-        rootMargin: '50px 0px',
-        threshold: 0.1
+        rootMargin: '100px 0px',
+        threshold: 0.01
     });
 
-    document.querySelectorAll('img[data-src]').forEach(img => {
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
         imageObserver.observe(img);
     });
 
@@ -40,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.rel = 'preload';
             link.as = 'image';
             link.href = src;
+            link.type = 'image/webp';
             document.head.appendChild(link);
         });
     }

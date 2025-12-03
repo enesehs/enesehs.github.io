@@ -1,0 +1,40 @@
+{
+  "name": "Enesehs - Game Developer Portfolio",
+  "short_name": "Enesehs",
+  "description": "Enes Hacısağır - CEO of Plasenta Entertainment. Unreal Engine 5 & C++ Game Developer specializing in AAA-quality game development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a0f",
+  "theme_color": "#212121",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/public/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/public/assets/img/profile-pic.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/public/assets/img/profile-pic.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "entertainment"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/public/assets/img/meta.webp",
+      "sizes": "1200x630",
+      "type": "image/webp"
+    }
+  ]
+}

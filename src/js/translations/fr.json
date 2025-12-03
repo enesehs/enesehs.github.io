@@ -31,6 +31,7 @@
   "aether_desc": "Aether est un outil de sécurité webcam open-source qui capture et crypte automatiquement des photos lors des tentatives d'accès au système. Fonctionnant entièrement hors ligne avec stockage local, il offre une façon simple mais puissante de surveiller et sécuriser votre système tout en maintenant une confidentialité complète.",
   "ewo_desc": "L'Optimiseur Windows d'Enesehs est un outil léger open-source conçu pour améliorer les performances des systèmes d'exploitation Windows. Il optimise votre ordinateur en nettoyant les fichiers inutiles, en libérant de l'espace disque et en fournissant des ajustements Windows. Avec ce logiciel open-source, vous pouvez vous assurer que votre système Windows fonctionne sans problème et efficacement.",
   "awms_desc": "whatsapp-automated-message-sender.py automatise l'envoi de messages à un groupe/utilisateur WhatsApp spécifique en utilisant Selenium WebDriver, permettant aux utilisateurs de communiquer efficacement via la plateforme.",
+  "usom_desc": "Ce projet convertit la liste d'URLs malveillantes publiée par le Département de Cybersécurité du Ministère des Transports et de l'Infrastructure de la République de Turquie (USOM) en formats adaptés à divers outils de sécurité.",
   
   "view_all_projects": "Voir tous les projets",
   
@@ -78,5 +79,11 @@
   "submit_form": "Envoyer le formulaire",
   
   "footer_copyright": "© 2025 Enesehs | Tous droits réservés",
-  "language_label": "Langue:"
+  "language_label": "Langue:",
+  "holiday_newyear": "🎉 Bonne Année! 🎊",
+  "holiday_april23": "🇹🇷 Joyeux Jour de la Souveraineté Nationale et de l'Enfant du 23 avril! 🎈",
+  "holiday_may19": "🇹🇷 Joyeux Jour de Commémoration d'Atatürk, de la Jeunesse et du Sport du 19 mai! ⚽",
+  "holiday_august30": "🇹🇷 Joyeuse Journée de la Victoire du 30 août! 🏆",
+  "holiday_october29": "🇹🇷 Joyeuse Fête de la République du 29 octobre! 🎊",
+  "holiday_november10": "🕯️ Nous nous souvenons du Grand Leader Mustafa Kemal Atatürk avec respect et gratitude. 🇹🇷"
 }

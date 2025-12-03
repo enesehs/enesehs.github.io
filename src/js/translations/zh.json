@@ -30,7 +30,8 @@
   "healer_desc": "一款手机侧卷轴冒险游戏，玩家收集草药并制作魔法治疗咒语。这款游戏是为 OUA 游戏开发马拉松仅用 24 小时开发的，拥有独特的药水机制和多个难度逐渐增加的挑战性关卡。",
   "aether_desc": "Aether 是一款开源网络摄像头安全工具，可在系统访问尝试期间自动捕获和加密照片。完全离线运行并具有本地存储功能，它提供了一种简单而强大的方式来监控和保护您的系统，同时保持完全的隐私。",
   "ewo_desc": "Enesehs 的 Windows 优化器是一款轻量级开源工具，旨在提高 Windows 操作系统的性能。它通过清理不必要的文件、释放磁盘空间并提供 Windows 调整来优化您的计算机。使用这款开源软件，您可以确保 Windows 系统流畅高效地运行。",
-  "awms_desc": "whatsapp-automated-message-sender.py 使用 Selenium WebDriver 自动向指定的 WhatsApp 群组/用户发送消息，使用户能够通过该平台高效地沟通。",
+  "awms_desc": "whatsapp-automated-message-sender.py 使用 Selenium WebDriver 自动向特定的 WhatsApp 群组/用户发送消息，使用户能够通过平台高效沟通。",
+  "usom_desc": "该项目将土耳其共和国交通和基础设施部网络安全部门（USOM）发布的恶意URL列表转换为适合各种安全工具的格式。",
   
   "view_all_projects": "查看所有项目",
   
@@ -78,5 +79,11 @@
   "submit_form": "提交表单",
   
   "footer_copyright": "© 2025 Enesehs | 版权所有",
-  "language_label": "语言:"
+  "language_label": "语言:",
+  "holiday_newyear": "🎉 新年快乐！ 🎊",
+  "holiday_april23": "🇹🇷 祝4月23日国家主权和儿童节快乐！ 🎈",
+  "holiday_may19": "🇹🇷 祝5月19日阿塔图尔克纪念日、青年和体育节快乐！ ⚽",
+  "holiday_august30": "🇹🇷 祝8月30日胜利日快乐！ 🏆",
+  "holiday_october29": "🇹🇷 祝10月29日共和国日快乐！ 🎊",
+  "holiday_november10": "🕯️ 我们怀着敬意和感激之情纪念伟大领袖穆斯塔法·凯末尔·阿塔图尔克。 🇹🇷"
 }

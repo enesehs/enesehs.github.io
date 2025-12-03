@@ -57,6 +57,16 @@ Designed & Developed with by Enesehs
     <meta name="author" content="Enes Hacısağır">
     <meta name="keywords" content="Enes Hacısağır, Enesehs, Game Developer, Unreal Engine, C++, Game Development, Portfolio, Plasenta Entertainment, Junior Game Developer, UE5">
     <link rel="canonical" href="https://enesehs.dev/">
+    <script>
+        (function() {
+            var expectedHost = 'enesehs.dev';
+            var h = location.hostname;
+            if (h !== expectedHost && !/^(localhost|127\.0\.0\.1)$/i.test(h)) {
+                var target = 'https://' + expectedHost + location.pathname + location.search + location.hash;
+                location.replace(target);
+            }
+        })();
+    </script>
     
     <!-- Language alternates for multi-language support -->
     <link rel="alternate" hreflang="en" href="https://enesehs.dev/" />
@@ -84,22 +94,18 @@ Designed & Developed with by Enesehs
         }
     </style>
 
-    <!-- Resource hints for performance -->
     <link rel="dns-prefetch" href="//unpkg.com">
     <link rel="dns-prefetch" href="//hcaptcha.com">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     
-    <!--MonaSans Optimized Preload - Only WOFF2 for better performance-->
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
-    <!-- Preload critical LCP image -->
     <link rel="preload" href="/public/assets/img/profile-pic.webp" as="image" type="image/webp">
     
-    <!-- Inline critical CSS for immediate rendering -->
     <style>
-        @font-face{font-family:MonaSansExpanded;src:url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2");font-display:swap}
+        @font-face{font-family:MonaSansExpanded;src:url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2");font-display:swap;font-weight:400;font-style:normal;unicode-range:U+0020-007E,U+00A0-00FF,U+0100-017F}
         :root{--dark:#212121;--white:#e8e8e8;--bg-empty:linear-gradient(40deg, #080a0f, #001120);--gradient:linear-gradient(90deg, #0066ff, #6b4aff, #6464ff, #32a0dc, #0066ff);--one-rgb:0,102,255;--two-rgb:107,74,255;--three-rgb:100,100,255;--four-rgb:50,160,220}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:MonaSansExpanded}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:MonaSansExpanded,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif}
         html{overflow-x:hidden;scroll-behavior:smooth}
         body{min-height:100vh;color:var(--white);background:var(--bg-empty);overflow-x:hidden;width:100%}
         header{position:fixed;width:100%;padding:25px 50px;transition:.6s ease;z-index:1000;top:0;left:0;box-sizing:border-box}
@@ -139,6 +145,23 @@ Designed & Developed with by Enesehs
         <link rel="stylesheet" href="/src/css/gradient-bg.min.css">
     </noscript>
     <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Enesehs">
+    <link rel="apple-touch-icon" href="/public/assets/img/profile-pic.webp">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Publisher & Author -->
+    <meta name="publisher" content="Plasenta Entertainment">
+    <link rel="author" href="https://enesehs.dev/">
     
     <!-- Structured Data (JSON-LD) for better SEO -->
     <script type="application/ld+json">
@@ -187,9 +210,54 @@ Designed & Developed with by Enesehs
             "@type": "Person",
             "name": "Enes Hacısağır",
             "alternateName": "Enesehs",
-            "description": "Junior Game Developer specializing in Unreal Engine 5 and C++",
+            "description": "CEO of Plasenta Entertainment, Game Developer specializing in Unreal Engine 5 and C++",
             "image": "https://enesehs.dev/public/assets/img/profile-pic.webp"
         }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://enesehs.dev/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Projects",
+                "item": "https://enesehs.dev/#projects"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Skills",
+                "item": "https://enesehs.dev/#skills"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Certificates",
+                "item": "https://enesehs.dev/#certificates"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "About",
+                "item": "https://enesehs.dev/#about"
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Contact",
+                "item": "https://enesehs.dev/#contact"
+            }
+        ]
     }
     </script>
 </head>
@@ -197,15 +265,15 @@ Designed & Developed with by Enesehs
 <body>
     <click-spark></click-spark>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">
                 <a href="#"><img src="/public/assets/img/enesehsdev.webp" alt="Enesehs Logo" draggable="false" loading="eager" decoding="async"></a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-section">
                 <li><a href="#" data-i18n="nav_home">Home</a></li>
                 <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
@@ -250,15 +318,15 @@ Designed & Developed with by Enesehs
                     <div class="profile-container">
                         <div class="profile-frame">
                             <img id="profile-pic" 
-                                 src="/public/assets/img/profile-pic.webp" 
-                                 alt="Enesehs" 
-                                 draggable="false"
-                                 data-nosnippet 
-                                 fetchpriority="high"
-                                 loading="eager"
-                                 decoding="sync"
-                                 width="400" 
-                                 height="400">
+                                    src="/public/assets/img/profile-pic.webp" 
+                                    alt="Enesehs" 
+                                    draggable="false"
+                                    data-nosnippet 
+                                    fetchpriority="high"
+                                    loading="eager"
+                                    decoding="sync"
+                                    width="400" 
+                                    height="400">
                         </div>
 
                         <div class="social-media">
@@ -287,7 +355,7 @@ Designed & Developed with by Enesehs
             </div>
         </section>
     </div>
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section" aria-labelledby="projects-header">
         <div class="section-header">
             <h2 data-i18n="projects_header">My Projects</h2>
             <p data-i18n="projects_subheader">Here are some of my game and app development projects</p>
@@ -450,7 +518,6 @@ Designed & Developed with by Enesehs
         </div>
 
         <div class="pagination">
-            <!-- Pagination buttons will be generated by JavaScript -->
         </div>
 
         <div class="view-more">
@@ -466,7 +533,7 @@ Designed & Developed with by Enesehs
         </div>
 
         <div class="skills-container">
-            <!-- Skills will be dynamically generated by JavaScript with i18n support -->
+            <!--JS-->
         </div>
     </section>
 
@@ -478,7 +545,6 @@ Designed & Developed with by Enesehs
 
         <div class="certificates-scroll-container">
             <div class="certificates-track">
-                <!-- First set of certificates with background images set directly in HTML -->
                 <div class="certificates-group">
                     <div class="certificate-card"
                         style="background-image: url('/public/assets/certificates/certificate4.webp');"
@@ -611,7 +677,7 @@ Designed & Developed with by Enesehs
                         </div>
                     </div>
                 </div>
-                <!-- Sonsuz Döngü (certificate.js) -->
+                <!--Döngü-->
                 <div class="certificates-group"></div>
 
             </div>
@@ -643,7 +709,7 @@ Designed & Developed with by Enesehs
                     <div class="about-details">
                         <div class="detail-item">
                             <h4 data-i18n="position">Current Position</h4>
-                            <p data-i18n="position_value">CEO and Head Programmer at Plasenta Entertainment</p>
+                            <p data-i18n="position_value">CEO & Lead Developer at Plasenta Entertainment</p>
                         </div>
                         <div class="detail-item">
                             <h4 data-i18n="specialization">Specialization</h4>
@@ -665,7 +731,7 @@ Designed & Developed with by Enesehs
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" aria-labelledby="contact-header">
         <div class="section-header">
             <h2 data-i18n="contact_header">Contact Me</h2>
             <p data-i18n="contact_subheader">Let's work together on your next project</p>
@@ -721,7 +787,7 @@ Designed & Developed with by Enesehs
                 </div>
             </div>
             <div class="contact-form">
-                <form id="contact-form" onsubmit="submitForm(event)">
+                <form id="contact-form" onsubmit="submitForm(event)" aria-labelledby="contact-header">
                     <div class="form-group">
                         <label for="name" data-i18n="name">Name</label>
                         <input type="text" id="name" name="entry.1977863006" placeholder="Your name" required data-i18n="name_placeholder">
@@ -813,41 +879,49 @@ Designed & Developed with by Enesehs
             <div class="g6"></div>
             <div class="interactive"></div>
         </div>
+        
         <canvas id="stage"></canvas>
+        
         <script src="/src/js/script.js" defer></script>
         <script src="/src/js/gradient.js" defer></script>
         <script src="/src/js/content.js" defer></script>
         <script src="/src/js/lazy-loading.js" defer></script>
+        <script src="/src/js/skeleton-loader.js" defer></script>
         <script src="/src/js/web-vitals.js" defer></script>
         <script type="module" src="/src/js/memes.js" defer></script>
         <script src="/src/js/captcha.js" defer></script>
         <script src="/src/js/clickspark.js" defer></script>
-        <script src="https://unpkg.com/scrollreveal" defer></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer crossorigin="anonymous"></script>
         <script src="/src/js/language-detector.js" defer></script>
         <script src="/src/js/snow.js" defer></script>
         
-        <!-- Dark Reader compatibility script -->
+        <!-- sw.js -->
         <script>
-            // Ensure Dark Reader recognizes the site as already dark
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(reg => console.log('SW registered:', reg.scope))
+                        .catch(err => console.log('SW registration failed:', err));
+                });
+            }
+        </script>
+        <script src="/src/js/snow.js" defer></script>
+        
+        <!-- Dark Reader compatibility-->
+        <script>
             document.documentElement.setAttribute('data-color-scheme', 'dark');
             document.documentElement.style.colorScheme = 'dark';
             
-            // Disable Dark Reader if it's active
             if (window.DarkReader) {
                 window.DarkReader.disable();
             }
             
-            // Set dark theme meta for compatibility
             const meta = document.createElement('meta');
             meta.name = 'theme-color';
             meta.content = '#080a0f';
             meta.setAttribute('media', '(prefers-color-scheme: dark)');
             document.head.appendChild(meta);
         </script>
-        
-    
-        
-        <!-- Load hCaptcha asynchronously only when needed -->
         <script>
             if (document.querySelector('.h-captcha')) {
                 const script = document.createElement('script');

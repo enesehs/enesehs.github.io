@@ -11,6 +11,35 @@ Allow: /public/assets/img/
 Allow: /public/assets/img/enesehsdev.webp
 Allow: /public/assets/img/meta.webp
 Allow: /public/assets/img/profile-pic.webp
+Allow: /public/assets/projects/
+
+# Special rules for image crawler
+User-agent: Googlebot-Image
+Allow: /public/assets/projects/
+Allow: /public/assets/img/
+
+# Block AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+# Bing specific crawl delay
+User-agent: Bingbot
+Crawl-delay: 2
 
 # Sitemap location
 Sitemap: https://enesehs.dev/sitemap.xml

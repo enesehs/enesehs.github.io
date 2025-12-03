@@ -25,6 +25,7 @@
     "aether_desc": "Aether es una herramienta de seguridad de webcam de código abierto que captura y encripta fotos automáticamente durante los intentos de acceso al sistema. Operando completamente fuera de línea con almacenamiento local, proporciona una forma simple pero poderosa de monitorear y asegurar tu sistema mientras mantiene una completa privacidad.",
     "ewo_desc": "El Optimizador de Windows de Enesehs es una herramienta ligera de código abierto diseñada para mejorar el rendimiento de los sistemas operativos Windows. Optimiza tu computadora limpiando archivos innecesarios, liberando espacio en disco y proporcionando ajustes para Windows. Con este software de código abierto, puedes asegurarte de que tu sistema Windows funcione sin problemas y de manera eficiente.",
     "awms_desc": "whatsapp-automated-message-sender.py automatiza el envío de mensajes a un grupo/usuario específico de WhatsApp utilizando Selenium WebDriver, permitiendo a los usuarios comunicarse eficientemente a través de la plataforma.",
+    "usom_desc": "Este proyecto convierte la lista de URLs maliciosas publicada por el Departamento de Ciberseguridad del Ministerio de Transporte e Infraestructura de la República de Turquía (USOM) en formatos adecuados para diversas herramientas de seguridad.",
     "view_all_projects": "Ver todos los proyectos",
     "skills_header": "Mis Habilidades",
     "skills_subheader": "Tecnologías y lenguajes con los que trabajo",
@@ -60,5 +61,11 @@
     "message_placeholder": "Tu mensaje",
     "submit_form": "Enviar Formulario",
     "footer_copyright": "© 2025 Enesehs | Todos los derechos reservados",
-    "language_label": "Idioma:"
+    "language_label": "Idioma:",
+    "holiday_newyear": "🎉 ¡Feliz Año Nuevo! 🎊",
+    "holiday_april23": "🇹🇷 ¡Feliz Día de la Soberanía Nacional y Día del Niño del 23 de Abril! 🎈",
+    "holiday_may19": "🇹🇷 ¡Feliz Día Conmemorativo de Atatürk, Día de la Juventud y del Deporte del 19 de Mayo! ⚽",
+    "holiday_august30": "🇹🇷 ¡Feliz Día de la Victoria del 30 de Agosto! 🏆",
+    "holiday_october29": "🇹🇷 ¡Feliz Día de la República del 29 de Octubre! 🎊",
+    "holiday_november10": "🕯️ Recordamos con respeto y gratitud al Gran Líder Mustafa Kemal Atatürk. 🇹🇷"
 }

@@ -15,53 +15,97 @@ This repository contains the source code for my personal portfolio website at [e
 
 ## ✨ Features
 
-- **📱 Responsive Design**: Optimized for all device types and screen sizes
-- **🎨 Dynamic Theme**: Light/dark mode toggle for better viewing experience
-- **🖼️ Project Showcase**: Interactive gallery of my game development projects
-- **📜 Skills Section**: Visual representation of my technical competencies
-- **🏆 Certificates**: Interactive scrolling display of professional certifications
-- **📬 Contact Form**: hCaptcha-protected contact form for professional inquiries
-- **🌊 Animated Elements**: Subtle animations and interactive components
-- **✨ Click Effects**: Custom click spark effects for enhanced user experience
+- ** Responsive Design**: Optimized for all device types and screen sizes
+- ** Multi-language Support**: Available in English, Turkish, Spanish, French, Hindi, Japanese, and Chinese
+- ** Dynamic Theme**: Language-based dark mode with smooth switch animations
+- ** Project Showcase**: Interactive gallery with pagination and lazy loading
+- ** Skills Section**: Visual skill levels with gradient animations
+- ** Certificates**: Interactive scrolling carousel with modal view
+- ** Contact Form**: hCaptcha-protected form with gradient submit button
+- ** Animated Elements**: Custom CSS animations with hardware acceleration
+- ** Click Effects**: Interactive click spark effects throughout the site
+- ** Seasonal Effects**: Dynamic snow animations (November-January)
+- ** Turkish Holidays**: Special celebration banners and tribute videos
+- ** Performance Optimized**: Skeleton loaders, lazy loading, and Core Web Vitals tracking
+- ** SEO Optimized**: JSON-LD schemas, Open Graph, canonical URLs, and security headers
+- ** PWA Ready**: Installable with service worker and offline support
+- ** Accessibility**: ARIA labels and semantic HTML throughout
 
 ## 🛠️ Technologies
 
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Animation**: Custom CSS animations and JavaScript transitions
-- **Form Handling**: Google Forms integration with custom submission handling
-- **Security**: hCaptcha integration for spam protection
-- **Performance**: Minified assets and lazy loading for optimal site speed
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+ Modules)
+- **Animation**: Custom CSS animations with GPU acceleration, gradient shifts
+- **Internationalization**: Dynamic i18n system with 6+ languages
+- **Form Handling**: Google Forms integration with hCaptcha protection
+- **Performance**: Minified assets, lazy loading, skeleton loaders, web vitals monitoring
+- **PWA**: Service worker, manifest.json, offline-first approach
+- **SEO**: JSON-LD schemas (Person, WebSite, ProfilePage, BreadcrumbList), meta tags
+- **Security**: Content security headers, AI bot protection in robots.txt
+- **Seasonal Features**: Dynamic snow effects, Turkish national holiday celebrations
+- **Browser Optimization**: Firefox-specific optimizations (45fps gradient rendering)
 
 ## 🔍 Project Structure
 
 ```
 enesehs.github.io/
-├── index.html              # Main HTML structure
+├── index.html              # Main HTML structure with SEO & PWA tags
+├── 404.html                # Custom 404 error page
+├── manifest.json           # PWA manifest
+├── sw.js                   # Service worker
+├── sitemap.xml             # Search engine sitemap
+├── robots.txt              # Crawler directives with AI bot blocking
+├── CNAME                   # Custom domain (enesehs.dev)
 ├── public/                 # Public assets
 │   ├── assets/             # Images and media
-│   │   ├── certificates/   # Certificate thumbnails
-│   │   ├── img/            # General images
-│   │   ├── links/          # Social media icons
-│   │   └── projects/       # Project thumbnails
+│   │   ├── certificates/   # Certificate thumbnails (15 WebP files)
+│   │   ├── img/            # General images (profile, meta, etc.)
+│   │   ├── links/          # Social media icons (WebP format)
+│   │   ├── projects/       # Project thumbnails (WebP format)
+│   │   ├── memes/          # Easter eggs (videos, sounds)
+│   │   └── font/           # MonaSans font files (WOFF2)
 │   └── favicon.ico         # Site favicon
 ├── src/                    # Source code
 │   ├── css/                # Stylesheets
+│   │   ├── critical.css    # Critical inline CSS
 │   │   ├── style.min.css   # Main styles (minified)
 │   │   ├── responsive.min.css  # Responsive design (minified)
 │   │   └── gradient-bg.min.css # Background effects (minified)
-│   └── js/                 # JavaScript files
+│   └── js/                 # JavaScript modules
 │       ├── script.js       # Main functionality
 │       ├── gradient.js     # Background gradient effects
-│       ├── content.js      # Content loading scripts
+│       ├── content.js      # Dynamic content loading
 │       ├── captcha.js      # hCaptcha implementation
 │       ├── clickspark.js   # Click effects
-│       └── memes.js        # Easter eggs & fun elements
+│       ├── lazy-loading.js # Image lazy loading
+│       ├── skeleton-loader.js # Loading animations
+│       ├── web-vitals.js   # Performance monitoring
+│       ├── language-detector.js # i18n system
+│       ├── snow.js         # Seasonal snow effects
+│       ├── memes.js        # Easter eggs loader
+│       ├── memes/          # Easter egg modules
+│       └── translations/   # i18n JSON files
+│           ├── tr.json     # Turkish
+│           ├── es.json     # Spanish
+│           ├── fr.json     # French
+│           ├── hi.json     # Hindi
+│           ├── ja.json     # Japanese
+│           └── zh.json     # Chinese
 └── README.md               # This documentation
 ```
 
 ## 👨‍💻 About Me
 
-I am Enes, a game developer specializing in Unreal Engine 5 and C++. As the founder of Plasenta Entertainment, I focus on creating immersive gaming experiences while continuously expanding my technical skills. My portfolio showcases both game projects and utility applications I've developed.
+I am Enes, a 21-year-old game developer and CEO & Lead Developer at Plasenta Entertainment. I specialize in Unreal Engine 5 and C++ development, creating immersive gaming experiences with a focus on innovative gameplay mechanics and technical excellence. My portfolio showcases game projects, utility applications, and a commitment to continuous learning in game development.
+
+## 🎯 Key Highlights
+
+- 🏢 Founder & CEO of Plasenta Entertainment
+- 🎓 Google Play & App Academy Graduate
+- 🎮 Unreal Engine 5 & C++ Specialist
+- 🌐 Multi-language portfolio (6+ languages)
+- 🏆 15+ Professional Certifications
+- ⚡ Performance-first development approach
+- 🎨 Modern UI/UX with accessibility in mind
 
 ## 📝 License
 
