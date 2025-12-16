@@ -94,13 +94,18 @@ Designed & Developed with by Enesehs
         }
     </style>
 
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://hcaptcha.com https://newassets.hcaptcha.com;">
+    
     <link rel="dns-prefetch" href="//unpkg.com">
     <link rel="dns-prefetch" href="//hcaptcha.com">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     
+    <!-- Preload critical resources -->
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    
     <link rel="preload" href="/public/assets/img/profile-pic.webp" as="image" type="image/webp">
+    <link rel="preload" href="/src/js/script.js" as="script">
+    <link rel="preload" href="/src/css/combined.min.css" as="style">
     
     <style>
         @font-face{font-family:MonaSansExpanded;src:url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2");font-display:swap;font-weight:400;font-style:normal;unicode-range:U+0020-007E,U+00A0-00FF,U+0100-017F}
@@ -135,14 +140,10 @@ Designed & Developed with by Enesehs
         .cta-btn:first-child{background:linear-gradient(135deg,rgba(var(--one-rgb),.2),rgba(var(--three-rgb),.2));border-color:rgba(var(--three-rgb),.4)}
     </style>
     
-    <!-- Load non-critical CSS asynchronously -->
-    <link rel="preload" href="/src/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/src/css/responsive.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/src/css/gradient-bg.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Load CSS - combined for fewer HTTP requests -->
+    <link rel="preload" href="/src/css/combined.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/src/css/style.min.css">
-        <link rel="stylesheet" href="/src/css/responsive.min.css">
-        <link rel="stylesheet" href="/src/css/gradient-bg.min.css">
+        <link rel="stylesheet" href="/src/css/combined.min.css">
     </noscript>
     <link rel="icon" type="image/x-icon" href="public/favicon.ico">
     
@@ -156,7 +157,6 @@ Designed & Developed with by Enesehs
     
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- Publisher & Author -->
@@ -367,7 +367,7 @@ Designed & Developed with by Enesehs
                 <div class="project-info-overlay">
                     <h3>Shatterpoint</h3>
                     <div class="tag-container">
-                        <span class="abondoned" data-i18n="abandoned">Abondoned</span>
+                        <span class="abandoned" data-i18n="abandoned">Abandoned</span>
                         <span>Unreal Engine 4</span>
                         <span>Blueprint</span>
                     </div>
@@ -511,8 +511,6 @@ Designed & Developed with by Enesehs
                 <div class="project-description">
                     <button class="close-description"><span>&times;</span></button>
                     <p data-i18n="usom_desc">This project converts the malicious URL list published by the Republic of Turkey Ministry of Transport and Infrastructure Cybersecurity Department (USOM) into suitable formats for various security tools.</p>
-                </div>
-            </div>
                 </div>
             </div>
         </div>
@@ -883,6 +881,7 @@ Designed & Developed with by Enesehs
         <canvas id="stage"></canvas>
         
         <script src="/src/js/script.js" defer></script>
+        <script src="/src/js/error-boundary.js" defer></script>
         <script src="/src/js/gradient.js" defer></script>
         <script src="/src/js/content.js" defer></script>
         <script src="/src/js/lazy-loading.js" defer></script>
@@ -890,8 +889,9 @@ Designed & Developed with by Enesehs
         <script src="/src/js/web-vitals.js" defer></script>
         <script type="module" src="/src/js/memes.js" defer></script>
         <script src="/src/js/captcha.js" defer></script>
-        <script src="/src/js/clickspark.js" defer></script>
         <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer crossorigin="anonymous"></script>
+        <script src="/src/js/scroll-animations.min.js" defer></script>
+        <script src="/src/js/clickspark.js" defer></script>
         <script src="/src/js/language-detector.js" defer></script>
         <script src="/src/js/snow.js" defer></script>
         
@@ -905,7 +905,6 @@ Designed & Developed with by Enesehs
                 });
             }
         </script>
-        <script src="/src/js/snow.js" defer></script>
         
         <!-- Dark Reader compatibility-->
         <script>
