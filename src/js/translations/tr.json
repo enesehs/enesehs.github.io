@@ -25,6 +25,7 @@
     "ewo_desc": "Enesehs'in Windows Optimizleyicisi, Windows işletim sistemlerinin performansını artırmak için tasarlanmış hafif bir açık kaynak araçtır. Gereksiz dosyaları temizleyerek, disk alanını boşaltarak ve Windows ayarlamaları sunarak bilgisayarınızı optimize eder. Bu açık kaynak kodlu yazılımla Windows sisteminizin sorunsuz ve verimli çalışmasını sağlayabilirsiniz.",
     "awms_desc": "whatsapp-automated-message-sender.py, Selenium WebDriver kullanarak belirli bir WhatsApp grubuna/kullanıcısına mesaj göndermeyi otomatikleştirir, kullanıcıların platform üzerinden verimli bir şekilde iletişim kurmasını sağlar.",
     "usom_desc": "Bu proje, T.C. Ulaştırma ve Altyapı Bakanlığı Siber Güvenlik Dairesi (USOM) tarafından yayınlanan zararlı URL listesini çeşitli güvenlik araçları için uygun formatlara dönüştürür.",
+    "hotpage_desc": "HotPage, tarayıcınızın varsayılan yeni sekme sayfasını kişiselleştirilmiş, widget açısından zengin bir panoya dönüştüren premium bir yeni sekme ana sayfa uzantısıdır. React 19 ve TypeScript ile oluşturulmuş olup glassmorphic tasarım sistemi, çoklu kaynak arka planları ve oturumlar arası kalıcı kişiselleştirme sunar.",
     "view_all_projects": "Tüm Projeleri Görüntüle",
     "skills_header": "Yeteneklerim",
     "skills_subheader": "Çalıştığım teknolojiler ve diller",

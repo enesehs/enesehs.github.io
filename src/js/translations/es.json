@@ -26,6 +26,7 @@
     "ewo_desc": "El Optimizador de Windows de Enesehs es una herramienta ligera de código abierto diseñada para mejorar el rendimiento de los sistemas operativos Windows. Optimiza tu computadora limpiando archivos innecesarios, liberando espacio en disco y proporcionando ajustes para Windows. Con este software de código abierto, puedes asegurarte de que tu sistema Windows funcione sin problemas y de manera eficiente.",
     "awms_desc": "whatsapp-automated-message-sender.py automatiza el envío de mensajes a un grupo/usuario específico de WhatsApp utilizando Selenium WebDriver, permitiendo a los usuarios comunicarse eficientemente a través de la plataforma.",
     "usom_desc": "Este proyecto convierte la lista de URLs maliciosas publicada por el Departamento de Ciberseguridad del Ministerio de Transporte e Infraestructura de la República de Turquía (USOM) en formatos adecuados para diversas herramientas de seguridad.",
+    "hotpage_desc": "HotPage es una extensión premium de página de inicio para nuevas pestañas que transforma la pestaña nueva predeterminada de tu navegador en un panel personalizado con widgets. Construido con React 19 y TypeScript, ofrece un sistema de diseño glassmórfico, fondos de múltiples fuentes y personalización persistente entre sesiones.",
     "view_all_projects": "Ver todos los proyectos",
     "skills_header": "Mis Habilidades",
     "skills_subheader": "Tecnologías y lenguajes con los que trabajo",

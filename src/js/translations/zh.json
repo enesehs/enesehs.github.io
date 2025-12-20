@@ -1,22 +1,17 @@
 {
   "meta_description": "Enes Hacısağır 是 Plasenta Entertainment 的创始人。他是一位虚幻引擎游戏开发者，专注于虚幻引擎 5 和 C++ 开发。",
-  
   "nav_home": "首页",
   "nav_projects": "项目",
   "nav_skills": "技能",
   "nav_certificates": "证书",
   "nav_about": "关于我",
   "nav_contact": "联系方式",
-  
   "greeting": "我是",
   "about_me": "\"我是 Plasenta Entertainment 的创始人和首席开发者。我完成了多个游戏开发课程，包括谷歌游戏和应用学院。使用虚幻引擎 5 和 C++，我通过游戏项目将我的想象力变为现实。我的目标是创造难忘的游戏体验，并致力于推动游戏开发的边界。如果您想在这个旅程中与我合作，请随时<a href='#contact' class='text-link'>联系我</a>。\"",
-  
   "learn_more": "了解更多",
   "see_projects": "查看项目",
-  
   "projects_header": "我的项目",
   "projects_subheader": "以下是我的游戏和应用程序开发项目",
-  
   "abandoned": "已放弃",
   "in_development": "开发中",
   "gamejam": "24小时游戏极限开发",
@@ -24,7 +19,6 @@
   "trailer": "预告片",
   "github": "Github",
   "download": "下载",
-  
   "shatterpoint_desc": "一个设定在梦境世界中的 3D 低多边形第一人称射击动作冒险游戏。玩家在各种环境中探索，解决谜题，并以有限的资源进行战术战斗。该游戏具有动态的日/夜循环系统，会影响敌人行为和游戏机制。",
   "fsa_desc": "一款氛围浓厚的心理恐怖游戏，具有动态环境和基于玩家选择的多结局叙事驱动游戏玩法。",
   "healer_desc": "一款手机侧卷轴冒险游戏，玩家收集草药并制作魔法治疗咒语。这款游戏是为 OUA 游戏开发马拉松仅用 24 小时开发的，拥有独特的药水机制和多个难度逐渐增加的挑战性关卡。",
@@ -32,12 +26,10 @@
   "ewo_desc": "Enesehs 的 Windows 优化器是一款轻量级开源工具，旨在提高 Windows 操作系统的性能。它通过清理不必要的文件、释放磁盘空间并提供 Windows 调整来优化您的计算机。使用这款开源软件，您可以确保 Windows 系统流畅高效地运行。",
   "awms_desc": "whatsapp-automated-message-sender.py 使用 Selenium WebDriver 自动向特定的 WhatsApp 群组/用户发送消息，使用户能够通过平台高效沟通。",
   "usom_desc": "该项目将土耳其共和国交通和基础设施部网络安全部门（USOM）发布的恶意URL列表转换为适合各种安全工具的格式。",
-  
+  "hotpage_desc": "HotPage 是一款高级新标签页主页扩展程序，可将浏览器默认的新标签页转变为个性化的小部件丰富仪表板。使用 React 19 和 TypeScript 构建，提供玻璃拟态设计系统、多源背景和跨会话持久个性化。",
   "view_all_projects": "查看所有项目",
-  
   "skills_header": "我的技能",
   "skills_subheader": "我工作中使用的技术和语言",
-  
   "unreal_desc": "使用虚幻引擎进行游戏开发，数据结构，算法",
   "cpp_desc": "游戏机制，关卡设计，蓝图，C++ 集成",
   "python_desc": "自动化，数据分析，使用 Tkinter 的 GUI 应用程序",
@@ -46,38 +38,29 @@
   "unity_desc": "游戏原型设计，移动开发，C# 集成",
   "git_desc": "版本控制，协作，项目管理",
   "sql_desc": "数据库设计，查询，数据管理",
-  
   "certificates_header": "我的证书",
   "certificates_subheader": "专业资格和成就",
   "see_all_certificates": "查看所有证书",
-  
   "about_header": "关于我",
   "about_subheader": "了解 Enesehs",
-  
   "about_text": "我是 Enes，一位 20 岁的游戏开发者，我对游戏开发的热情源于我早期的编程经验。我是 Plasenta Entertainment 的创始人和首席开发者。我已完成多个重要项目，包括谷歌游戏和应用学院。通过使用虚幻引擎 5 和 C++ 开发项目，我在游戏世界中将我的想象力变为现实。<br>我的目标是创造能为玩家提供难忘体验的 AAA 级游戏，在这个领域我有很大的梦想。如果您有兴趣在这个旅程中合作，请随时与我联系。",
-  
   "position": "当前职位",
   "position_value": "Plasenta Entertainment 的 CEO 和首席程序员",
   "specialization": "专长",
   "specialization_value": "专注于虚幻引擎、C++ 和蓝图",
-  
   "contact_me": "联系我",
-  
   "contact_header": "联系我",
   "contact_subheader": "让我们一起合作您的下一个项目",
-  
   "email": "电子邮箱",
   "location": "位置",
   "location_value": "土耳其伊斯坦布尔",
   "social": "社交媒体",
-  
   "name": "姓名",
   "name_placeholder": "您的姓名",
   "email_placeholder": "您的电子邮箱",
   "message": "留言",
   "message_placeholder": "您的留言",
   "submit_form": "提交表单",
-  
   "footer_copyright": "© 2025 Enesehs | 版权所有",
   "language_label": "语言:",
   "holiday_newyear": "🎉 新年快乐！ 🎊",
