@@ -1,6 +1,5 @@
 function showMessage(message){const messageDiv=document.createElement("div");Object.assign(messageDiv.style,{fontFamily:"MonaSansExpanded",position:"fixed",bottom:"20px",right:"20px",backgroundColor:"#080a0f52",backdropFilter:"blur(10px)",color:"#fff",padding:"10px 20px",borderRadius:"5px",boxShadow:"0 2px 10px rgba(0, 0, 0, 0.2)",zIndex:"1000",opacity:"0",transition:"opacity 0.5s ease-in-out"}),messageDiv.textContent=message,document.body.appendChild(messageDiv),setTimeout(()=>{messageDiv.style.opacity="1"},100),setTimeout(()=>{messageDiv.style.opacity="0",setTimeout(()=>{document.body.removeChild(messageDiv)},500)},3e3)}
 
-// BFCache Conf
 window.initializeAfterBFCache = function() {
     if (typeof initSpinningText === 'function') {
         initSpinningText();

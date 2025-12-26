@@ -12,6 +12,16 @@
         </image:image>
     </url>
     <url>
+        <loc>https://enesehs.dev/Hotpage/</loc>
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://enesehs.dev/public/assets/projects/project8.webp</image:loc>
+            <image:title>Hotpage</image:title>
+        </image:image>
+    </url>
+    <url>
         <loc>https://enesehs.dev/Aether/</loc>
         <lastmod>2025-11-27</lastmod>
         <changefreq>monthly</changefreq>

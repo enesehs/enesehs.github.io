@@ -8,16 +8,17 @@
 86868686 86    86 86868686  868686  86868686 86     86  868686               02:34 17.03.2025 :)
 
 Designed & Developed with by Enesehs
-© 2025 | All rights reserved
+© 2026 | All rights reserved
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <!-- Primary Meta Tags -->
     <title data-i18n="page_title"> Enesehs | Jr. Game Developer </title>
+    <meta charset="UTF-8">
     <meta name="title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
     <meta name="description"
-        content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development, "
+        content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer specializing in Unreal Engine 5 and C++ development."
         data-i18n="meta_description" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -46,9 +47,7 @@ Designed & Developed with by Enesehs
     <meta property="twitter:image:alt" content="Enesehs - Junior Game Developer Portfolio" />
     <meta property="twitter:creator" content="@enesehs" />
     <meta property="twitter:site" content="@enesehs" />
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="max-age=31536000">
     
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -68,7 +67,6 @@ Designed & Developed with by Enesehs
         })();
     </script>
     
-    <!-- Language alternates for multi-language support -->
     <link rel="alternate" hreflang="en" href="https://enesehs.dev/" />
     <link rel="alternate" hreflang="tr" href="https://enesehs.dev/" />
     <link rel="alternate" hreflang="es" href="https://enesehs.dev/" />
@@ -94,17 +92,12 @@ Designed & Developed with by Enesehs
         }
     </style>
 
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://hcaptcha.com https://newassets.hcaptcha.com;">
-    
-    <link rel="dns-prefetch" href="//unpkg.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://hcaptcha.com https://newassets.hcaptcha.com https://www.youtube.com;">
     <link rel="dns-prefetch" href="//hcaptcha.com">
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     
-    <!-- Preload critical resources -->
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/public/assets/img/profile-pic.webp" as="image" type="image/webp">
-    <link rel="preload" href="/src/js/script.js" as="script">
+    <link rel="preload" href="/src/js/core.js" as="script">
     <link rel="preload" href="/src/css/combined.min.css" as="style">
     
     <style>
@@ -163,99 +156,70 @@ Designed & Developed with by Enesehs
     <meta name="publisher" content="Plasenta Entertainment">
     <link rel="author" href="https://enesehs.dev/">
     
-    <!-- Structured Data (JSON-LD) for better SEO -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Enes Hacısağır",
-        "alternateName": "Enesehs",
-        "url": "https://enesehs.dev",
-        "image": "https://enesehs.dev/public/assets/img/profile-pic.webp",
-        "jobTitle": "Junior Game Developer",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Plasenta Entertainment"
-        },
-        "knowsAbout": ["Unreal Engine 5", "C++", "Game Development", "Blueprint", "Python", "Web Development"],
-        "sameAs": [
-            "https://github.com/enesehs",
-            "https://www.linkedin.com/in/enes-hacisagir/",
-            "https://www.youtube.com/@enesehs"
-        ],
-        "description": "Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development."
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Enesehs Portfolio",
-        "url": "https://enesehs.dev",
-        "description": "Junior Game Developer Portfolio - Unreal Engine & C++ Specialist",
-        "author": {
-            "@type": "Person",
-            "name": "Enes Hacısağır"
-        },
-        "inLanguage": ["en", "tr", "es", "fr", "hi", "ja", "zh"]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "mainEntity": {
-            "@type": "Person",
-            "name": "Enes Hacısağır",
-            "alternateName": "Enesehs",
-            "description": "CEO of Plasenta Entertainment, Game Developer specializing in Unreal Engine 5 and C++",
-            "image": "https://enesehs.dev/public/assets/img/profile-pic.webp"
-        }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        "@graph": [
             {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://enesehs.dev/"
+                "@type": "WebSite",
+                "@id": "https://enesehs.dev/#website",
+                "url": "https://enesehs.dev",
+                "name": "Enesehs Portfolio",
+                "description": "Junior Game Developer Portfolio - Unreal Engine & C++ Specialist",
+                "publisher": { "@id": "https://enesehs.dev/#person" },
+                "inLanguage": ["en", "tr", "es", "fr", "ja", "zh"],
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://enesehs.dev/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
             },
             {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Projects",
-                "item": "https://enesehs.dev/#projects"
+                "@type": "ProfilePage",
+                "@id": "https://enesehs.dev/#webpage",
+                "url": "https://enesehs.dev",
+                "name": "Enesehs | Jr. Game Developer",
+                "isPartOf": { "@id": "https://enesehs.dev/#website" },
+                "about": { "@id": "https://enesehs.dev/#person" },
+                "breadcrumb": { "@id": "https://enesehs.dev/#breadcrumb" }
             },
             {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Skills",
-                "item": "https://enesehs.dev/#skills"
+                "@type": "Organization",
+                "@id": "https://enesehs.dev/#organization",
+                "name": "Plasenta Entertainment",
+                "url": "https://enesehs.dev",
+                "logo": "https://enesehs.dev/public/assets/links/Plasenta.webp",
+                "founder": { "@id": "https://enesehs.dev/#person" }
             },
             {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Certificates",
-                "item": "https://enesehs.dev/#certificates"
+                "@type": "Person",
+                "@id": "https://enesehs.dev/#person",
+                "name": "Enes Hacısağır",
+                "alternateName": "Enesehs",
+                "url": "https://enesehs.dev",
+                "image": "https://enesehs.dev/public/assets/img/profile-pic.webp",
+                "jobTitle": "CEO & Game Developer",
+                "worksFor": { "@id": "https://enesehs.dev/#organization" },
+                "knowsAbout": ["Unreal Engine 5", "C++", "Game Development", "Blueprint", "Python", "Game Architecture"],
+                "sameAs": [
+                    "https://github.com/enesehs",
+                    "https://www.linkedin.com/in/enes-hacisagir/",
+                    "https://www.youtube.com/@enesehs",
+                    "https://www.instagram.com/enesehs.dev/"
+                ]
             },
             {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "About",
-                "item": "https://enesehs.dev/#about"
-            },
-            {
-                "@type": "ListItem",
-                "position": 6,
-                "name": "Contact",
-                "item": "https://enesehs.dev/#contact"
+                "@type": "BreadcrumbList",
+                "@id": "https://enesehs.dev/#breadcrumb",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://enesehs.dev/" },
+                    { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://enesehs.dev/#projects" },
+                    { "@type": "ListItem", "position": 3, "name": "Skills", "item": "https://enesehs.dev/#skills" },
+                    { "@type": "ListItem", "position": 4, "name": "Certificates", "item": "https://enesehs.dev/#certificates" },
+                    { "@type": "ListItem", "position": 5, "name": "About", "item": "https://enesehs.dev/#about" },
+                    { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://enesehs.dev/#contact" }
+                ]
             }
         ]
     }
@@ -295,7 +259,7 @@ Designed & Developed with by Enesehs
             <div class="hero-container">
                 <div class="left-content">
                     <div class="title-container">
-                        <h3 class="greeting" data-i18n="greeting">I'm</h3>
+                        <p class="greeting" data-i18n="greeting">I'm</p>
                         <h1 id="Spinning-Text">Enesehs</h1>
                     </div>
 
@@ -331,23 +295,23 @@ Designed & Developed with by Enesehs
 
                         <div class="social-media">
                             <ul class="social-icons">
-                                <li><a href="https://www.linkedin.com/in/enesehs/" aria-label="LinkedIn"><img
-                                            src="/public/assets/links/linkedin.webp" alt="LinkedIn" id="linkedin"
-                                            draggable="false" loading="lazy" decoding="async"></a></li>
-                                <li><a href="https://github.com/enesehs" aria-label="GitHub"><img
-                                            src="/public/assets/links/github.webp" alt="GitHub" id="github"
-                                            draggable="false" loading="lazy" decoding="async"></a></li>
+                                <li><a href="https://www.linkedin.com/in/enesehs/" target="_blank" rel="noopener" aria-label="LinkedIn"><img
+                                            src="/public/assets/links/linkedin.webp" alt="" id="linkedin"
+                                            width="35" height="35" loading="lazy" decoding="async"></a></li>
+                                <li><a href="https://github.com/enesehs" target="_blank" rel="noopener" aria-label="GitHub"><img
+                                            src="/public/assets/links/github.webp" alt="" id="github"
+                                            width="35" height="35" loading="lazy" decoding="async"></a></li>
                                 <li><a href="#" aria-label="Plasenta"><img src="/public/assets/links/Plasenta.webp"
-                                            draggable="false" id="plasenta" alt="Plasenta" loading="lazy" decoding="async"></a></li>
-                                <li><a href="https://www.instagram.com/enesehs.dev/" aria-label="Instagram"><img
-                                            src="/public/assets/links/instagram.webp" id="instagram" alt="Instagram"
-                                            draggable="false" loading="lazy" decoding="async"></a></li>
+                                            id="plasenta" alt="" width="35" height="35" loading="lazy" decoding="async"></a></li>
+                                <li><a href="https://www.instagram.com/enesehs.dev/" target="_blank" rel="noopener" aria-label="Instagram"><img
+                                            src="/public/assets/links/instagram.webp" id="instagram" alt=""
+                                            width="35" height="35" loading="lazy" decoding="async"></a></li>
                                 <li><a href="https://open.spotify.com/user/21a6im72dymlsyyaasjejv2by?si=d8545eb4f9984aa4"
-                                        aria-label="Spotify"><img src="/public/assets/links/spotify.webp" id="spotify"
-                                            alt="Spotify" draggable="false" loading="lazy" decoding="async"></a></li>
-                                <li><a href="https://www.youtube.com/@enesehs" aria-label="YouTube"><img
-                                            src="/public/assets/links/youtube.webp" alt="YouTube" id="youtube"
-                                            draggable="false" loading="lazy" decoding="async"></a></li>
+                                        target="_blank" rel="noopener" aria-label="Spotify"><img src="/public/assets/links/spotify.webp" id="spotify"
+                                            alt="" width="35" height="35" loading="lazy" decoding="async"></a></li>
+                                <li><a href="https://www.youtube.com/@enesehs" target="_blank" rel="noopener" aria-label="YouTube"><img
+                                            src="/public/assets/links/youtube.webp" alt="" id="youtube"
+                                            width="44" height="35" loading="lazy" decoding="async"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -870,7 +834,7 @@ Designed & Developed with by Enesehs
             </select>
         </div>
         
-        <p data-i18n="footer_copyright">&copy; 2025 Enesehs | All Rights Reserved</p>
+        <p data-i18n="footer_copyright">&copy; 2026 Enesehs | All Rights Reserved</p>
     </footer>
     <div class="gradient-bg">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="noiseBg">
@@ -900,22 +864,10 @@ Designed & Developed with by Enesehs
         
         <canvas id="stage"></canvas>
         
-        <script src="/src/js/script.js" defer></script>
-        <script src="/src/js/error-boundary.js" defer></script>
-        <script src="/src/js/gradient.js" defer></script>
-        <script src="/src/js/content.js" defer></script>
-        <script src="/src/js/lazy-loading.js" defer></script>
-        <script src="/src/js/skeleton-loader.js" defer></script>
-        <script src="/src/js/web-vitals.js" defer></script>
+        <script src="/src/js/vendor/scrollreveal.min.js" defer></script>
+        <script type="module" src="/src/js/core.js" defer></script>
         <script type="module" src="/src/js/memes.js" defer></script>
-        <script src="/src/js/captcha.js" defer></script>
-        <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer crossorigin="anonymous"></script>
-        <script src="/src/js/scroll-animations.min.js" defer></script>
-        <script src="/src/js/clickspark.js" defer></script>
-        <script src="/src/js/language-detector.js" defer></script>
-        <script src="/src/js/snow.js" defer></script>
         
-        <!-- sw.js -->
         <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
@@ -924,24 +876,16 @@ Designed & Developed with by Enesehs
                         .catch(err => console.log('SW registration failed:', err));
                 });
             }
-        </script>
-        
-        <!-- Dark Reader compatibility-->
-        <script>
+            
             document.documentElement.setAttribute('data-color-scheme', 'dark');
             document.documentElement.style.colorScheme = 'dark';
-            
-            if (window.DarkReader) {
-                window.DarkReader.disable();
-            }
-            
+            if (window.DarkReader) window.DarkReader.disable();
             const meta = document.createElement('meta');
             meta.name = 'theme-color';
             meta.content = '#080a0f';
             meta.setAttribute('media', '(prefers-color-scheme: dark)');
             document.head.appendChild(meta);
-        </script>
-        <script>
+
             if (document.querySelector('.h-captcha')) {
                 const script = document.createElement('script');
                 script.src = 'https://hcaptcha.com/1/api.js';
