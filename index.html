@@ -92,7 +92,7 @@ Designed & Developed with by Enesehs
         }
     </style>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://hcaptcha.com https://newassets.hcaptcha.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://hcaptcha.com https://newassets.hcaptcha.com https://www.youtube.com;">
+    <!-- CSP moved to server headers for better compatibility -->
     <link rel="dns-prefetch" href="//hcaptcha.com">
     
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -182,7 +182,10 @@ Designed & Developed with by Enesehs
                 "name": "Enesehs | Jr. Game Developer",
                 "isPartOf": { "@id": "https://enesehs.dev/#website" },
                 "about": { "@id": "https://enesehs.dev/#person" },
-                "breadcrumb": { "@id": "https://enesehs.dev/#breadcrumb" }
+                "mainEntity": { "@id": "https://enesehs.dev/#person" },
+                "breadcrumb": { "@id": "https://enesehs.dev/#breadcrumb" },
+                "dateCreated": "2024-01-01",
+                "dateModified": "2025-12-28"
             },
             {
                 "@type": "Organization",
@@ -769,7 +772,7 @@ Designed & Developed with by Enesehs
                 </div>
             </div>
             <div class="contact-form">
-                <form id="contact-form" onsubmit="submitForm(event)" aria-labelledby="contact-header">
+                <form id="contact-form" aria-labelledby="contact-header">
                     <div class="form-group">
                         <label for="name" data-i18n="name">Name</label>
                         <input type="text" id="name" name="entry.1977863006" placeholder="Your name" required data-i18n="name_placeholder">
@@ -865,8 +868,8 @@ Designed & Developed with by Enesehs
         <canvas id="stage"></canvas>
         
         <script src="/src/js/vendor/scrollreveal.min.js" defer></script>
-        <script type="module" src="/src/js/core.js" defer></script>
-        <script type="module" src="/src/js/memes.js" defer></script>
+        <script type="module" src="/src/js/core.js"></script>
+        <script type="module" src="/src/js/memes.js"></script>
         
         <script>
             if ('serviceWorker' in navigator) {
