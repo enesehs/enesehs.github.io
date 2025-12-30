@@ -7,4 +7,14 @@ import './memes/gravity.js';
 import './memes/secretword.js';
 import './memes/bayram.js';
 import './memes/fps.js';
-document.addEventListener("keydown",(function(event){"F12"===event.key&&(alert("debugging"),event.preventDefault())})),document.addEventListener("keydown",(function(event){event.ctrlKey&&event.shiftKey&&("I"===event.key||"i"===event.key)&&(alert("debugging"),event.preventDefault())})),document.addEventListener("contextmenu",(function(event){}));
+
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+        setInterval(() => { debugger; }, 100);

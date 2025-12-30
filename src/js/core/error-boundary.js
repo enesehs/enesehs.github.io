@@ -15,7 +15,7 @@
         try {
             return fn();
         } catch (e) {
-            console.warn('⚠️ Safe execute caught:', e.message);
+            console.warn('Safe execute caught:', e.message);
             return typeof fallback === 'function' ? fallback() : fallback;
         }
     };
