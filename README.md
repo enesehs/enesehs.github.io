@@ -95,7 +95,7 @@ enesehs.github.io/
 
 ## 👨‍💻 About Me
 
-I am Enes, a 21-year-old game developer and CEO & Lead Developer at Plasenta Entertainment. I specialize in Unreal Engine 5 and C++ development, creating immersive gaming experiences with a focus on innovative gameplay mechanics and technical excellence. My portfolio showcases game projects, utility applications, and a commitment to continuous learning in game development.
+I am Enes, a 21-year-old game developer and Founder & Lead Developer at Plasenta Entertainment. I specialize in Unreal Engine 5 and C++ development, creating immersive gaming experiences with a focus on innovative gameplay mechanics and technical excellence. My portfolio showcases game projects, utility applications, and a commitment to continuous learning in game development.
 
 ## 🎯 Key Highlights
 
@@ -122,4 +122,4 @@ For inquiries, please use the contact form on my website or reach me through:
 
 ---
 
-© 2025 Enesehs | All Rights Reserved
+© 2026 Enesehs | All Rights Reserved

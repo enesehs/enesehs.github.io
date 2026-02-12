@@ -1,16 +1,16 @@
-const CACHE_NAME = 'enesehs-v86';
+const CACHE_NAME = 'enesehs-v87';
 const IMMUTABLE_CACHE = 'enesehs-static-v1';
+const IMAGE_CACHE = 'enesehs-images-v1';
 const urlsToCache = [
   '/',
   '/offline.html',
-  '/src/css/style.min.css',
-  '/src/css/responsive.min.css', 
-  '/src/css/gradient-bg.min.css',
-  '/src/css/critical.css',
-  '/src/js/script.js',
-  '/src/js/content.js',
-  '/src/js/gradient.js',
-  '/src/js/lazy-loading.js',
+  '/src/css/combined.min.css',
+  '/src/js/core.js',
+  '/src/js/memes.js',
+  '/src/js/core/script.js',
+  '/src/js/core/content.js',
+  '/src/js/core/gradient.js',
+  '/src/js/core/lazy-loading.min.js',
   '/public/assets/img/enesehsdev.webp',
   '/public/assets/img/meta.webp',
   '/public/favicon.ico'
@@ -53,6 +53,24 @@ self.addEventListener('fetch', event => {
             cache.put(event.request, fetchResponse.clone());
             return fetchResponse;
           });
+        });
+      })
+    );
+    return;
+  }
+
+  // Long-lived cache for images (stale-while-revalidate)
+  if (url.pathname.match(/\.(webp|png|jpg|jpeg|gif|svg|ico)$/i)) {
+    event.respondWith(
+      caches.open(IMAGE_CACHE).then(cache => {
+        return cache.match(event.request).then(cachedResponse => {
+          const fetchPromise = fetch(event.request).then(networkResponse => {
+            if (networkResponse && networkResponse.status === 200) {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          }).catch(() => cachedResponse);
+          return cachedResponse || fetchPromise;
         });
       })
     );
@@ -108,7 +126,7 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('activate', event => {
-  const cacheWhitelist = [CACHE_NAME, IMMUTABLE_CACHE];
+  const cacheWhitelist = [CACHE_NAME, IMMUTABLE_CACHE, IMAGE_CACHE];
   
   event.waitUntil(
     caches.keys().then(cacheNames => {

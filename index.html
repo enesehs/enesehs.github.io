@@ -14,16 +14,16 @@ Designed & Developed with by Enesehs
 <html lang="en" dir="ltr">
 <head>
     <!-- Primary Meta Tags -->
-    <title data-i18n="page_title"> Enesehs | Jr. Game Developer </title>
+    <title data-i18n="page_title"> Enesehs | Unreal Engine Game Developer </title>
     <meta charset="UTF-8">
-    <meta name="title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
+    <meta name="title" content=" Enesehs | Unreal Engine Game Developer " data-i18n="page_title" />
     <meta name="description"
         content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer specializing in Unreal Engine 5 and C++ development."
         data-i18n="meta_description" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://enesehs.dev/" />
-    <meta property="og:title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
+    <meta property="og:title" content=" Enesehs | Unreal Engine Game Developer " data-i18n="page_title" />
     <meta property="og:description"
         content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development, "
         data-i18n="meta_description" />
@@ -31,7 +31,7 @@ Designed & Developed with by Enesehs
     <meta property="og:image:secure_url" content="https://enesehs.dev/public/assets/img/meta.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Enesehs - Junior Game Developer Portfolio" />
+    <meta property="og:image:alt" content="Enesehs - Unreal Engine Game Developer Portfolio" />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Enesehs Portfolio" />
@@ -39,12 +39,12 @@ Designed & Developed with by Enesehs
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://enesehs.dev/" />
-    <meta property="twitter:title" content=" Enesehs | Jr. Game Developer " data-i18n="page_title" />
+    <meta property="twitter:title" content=" Enesehs | Unreal Engine Game Developer " data-i18n="page_title" />
     <meta property="twitter:description"
         content="Enes Hacısağır is the founder of Plasenta Entertainment. He is an Unreal Engine game developer. Specializing in Unreal Engine 5 and C++ development, "
         data-i18n="meta_description" />
     <meta property="twitter:image" content="https://enesehs.dev/public/assets/img/meta.webp" />
-    <meta property="twitter:image:alt" content="Enesehs - Junior Game Developer Portfolio" />
+    <meta property="twitter:image:alt" content="Enesehs - Unreal Engine Game Developer Portfolio" />
     <meta property="twitter:creator" content="@enesehs" />
     <meta property="twitter:site" content="@enesehs" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,10 +67,6 @@ Designed & Developed with by Enesehs
         })();
     </script>
     
-    <link rel="alternate" hreflang="en" href="https://enesehs.dev/" />
-    <link rel="alternate" hreflang="tr" href="https://enesehs.dev/" />
-    <link rel="alternate" hreflang="es" href="https://enesehs.dev/" />
-    <link rel="alternate" hreflang="fr" href="https://enesehs.dev/" />
     <link rel="alternate" hreflang="x-default" href="https://enesehs.dev/" />
     
     <!-- Geo Tags -->
@@ -96,7 +92,7 @@ Designed & Developed with by Enesehs
     <link rel="preload" href="/public/assets/font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/public/assets/img/profile-pic.webp" as="image" type="image/webp">
     <link rel="modulepreload" href="/src/js/core.js">
-    <link rel="preload" href="/src/css/combined.min.css" as="style">
+    <link rel="preload" href="/src/css/combined.min.css" as="style" fetchpriority="high">
     
     <style>
         @font-face{font-family:MonaSansExpanded;src:url(/public/assets/font/MonaSansExpanded-Regular.woff2) format("woff2");font-display:swap;font-weight:400;font-style:normal;unicode-range:U+0020-007E,U+00A0-00FF,U+0100-017F}
@@ -115,7 +111,9 @@ Designed & Developed with by Enesehs
         .left-content{flex:1;min-width:300px;max-width:650px}
         .title-container{margin-bottom:24px}
         .greeting{color:var(--white);font-size:1.5rem;font-weight:400;margin-bottom:8px}
-        #Spinning-Text{font-size:4.2rem;font-weight:700;color:var(--white);margin-bottom:10px;white-space:nowrap}
+        #Spinning-Text{font-size:4.2rem;font-weight:700;color:var(--white);margin-bottom:10px;white-space:nowrap;min-height:1.2em;line-height:1.2;contain:content}
+        .tagline{font-size:1.1rem;color:#fbfbfbb4;font-weight:400;font-style:italic;margin-top:8px;letter-spacing:.5px}
+        .skills-container>.skill-card{display:none!important}
         .about-me{margin-bottom:32px;padding-right:20px;width:700px}
         .about-me p{color:#fbfbfbb4;mix-blend-mode:lighten;font-size:1rem;line-height:1.8;font-weight:400}
         .right-content{flex:1;min-width:300px;display:flex;justify-content:center;align-items:center;margin-right:-140px}
@@ -164,7 +162,7 @@ Designed & Developed with by Enesehs
                 "@id": "https://enesehs.dev/#website",
                 "url": "https://enesehs.dev",
                 "name": "Enesehs Portfolio",
-                "description": "Junior Game Developer Portfolio - Unreal Engine & C++ Specialist",
+                "description": "Unreal Engine Game Developer Portfolio - Unreal Engine & C++ Specialist",
                 "publisher": { "@id": "https://enesehs.dev/#person" },
                 "inLanguage": ["en", "tr", "es", "fr", "ja", "zh"],
                 "potentialAction": {
@@ -177,7 +175,7 @@ Designed & Developed with by Enesehs
                 "@type": "ProfilePage",
                 "@id": "https://enesehs.dev/#webpage",
                 "url": "https://enesehs.dev",
-                "name": "Enesehs | Jr. Game Developer",
+                "name": "Enesehs | Unreal Engine Game Developer",
                 "isPartOf": { "@id": "https://enesehs.dev/#website" },
                 "about": { "@id": "https://enesehs.dev/#person" },
                 "mainEntity": { "@id": "https://enesehs.dev/#person" },
@@ -200,7 +198,7 @@ Designed & Developed with by Enesehs
                 "alternateName": "Enesehs",
                 "url": "https://enesehs.dev",
                 "image": "https://enesehs.dev/public/assets/img/profile-pic.webp",
-                "jobTitle": "CEO & Game Developer",
+                "jobTitle": "Founder & Game Developer",
                 "worksFor": { "@id": "https://enesehs.dev/#organization" },
                 "knowsAbout": ["Unreal Engine 5", "C++", "Game Development", "Blueprint", "Python", "Game Architecture"],
                 "sameAs": [
@@ -232,7 +230,7 @@ Designed & Developed with by Enesehs
     <header>
         <nav aria-label="Main navigation">
             <div class="logo">
-                <a href="#"><img src="/public/assets/img/enesehsdev.webp" alt="Enesehs Logo" draggable="false" loading="eager" decoding="async"></a>
+                <a href="#"><img src="/public/assets/img/enesehsdev.webp" alt="Enesehs Logo" draggable="false" loading="eager" decoding="async" width="120" height="40"></a>
             </div>
             <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
@@ -262,6 +260,7 @@ Designed & Developed with by Enesehs
                     <div class="title-container">
                         <p class="greeting" data-i18n="greeting">I'm</p>
                         <h1 id="Spinning-Text">Enesehs</h1>
+                        <p class="tagline" data-i18n="tagline">Turning Code into Unforgettable Narrative.</p>
                     </div>
 
                     <div class="about-me">
@@ -328,7 +327,7 @@ Designed & Developed with by Enesehs
 
         <div class="projects-container">
             <div class="project-card">
-                <img src="/public/assets/projects/project1.webp" alt="Shatterpoint" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project1.webp" alt="Shatterpoint" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Shatterpoint</h3>
                     <div class="tag-container">
@@ -350,7 +349,7 @@ Designed & Developed with by Enesehs
             </div>
 
             <div class="project-card">
-                <img src="/public/assets/projects/project2-0.webp" alt="FSA" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project2-0.webp" alt="FSA" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Project FSA</h3>
                     <div class="tag-container">
@@ -370,7 +369,7 @@ Designed & Developed with by Enesehs
             </div>
 
             <div class="project-card">
-                <img src="/public/assets/projects/project3.webp" alt="The Healer" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project3.webp" alt="The Healer" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>The Healer</h3>
                     <div class="tag-container">
@@ -393,7 +392,7 @@ Designed & Developed with by Enesehs
             </div>
 
             <div class="project-card">
-                <img src="/public/assets/projects/project4.webp" alt="Aether" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project4.webp" alt="Aether" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Aether</h3>
                     <div class="tag-container">
@@ -416,7 +415,7 @@ Designed & Developed with by Enesehs
             </div>
 
             <div class="project-card">
-                <img src="/public/assets/projects/project5.webp" alt="EWO" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project5.webp" alt="EWO" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Enesehs Windows Optimizer</h3>
                     <div class="tag-container">
@@ -438,7 +437,7 @@ Designed & Developed with by Enesehs
             </div>
 
             <div class="project-card">
-                <img src="/public/assets/projects/project6.webp" alt="AWMS" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project6.webp" alt="AWMS" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Automated Whatsapp Message Sender</h3>
                     <div class="tag-container">
@@ -459,7 +458,7 @@ Designed & Developed with by Enesehs
                 </div>
             </div>
             <div class="project-card">
-                <img src="/public/assets/projects/project7.webp" alt="USOM" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project7.webp" alt="USOM" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>USOM Filter</h3>
                     <div class="tag-container">
@@ -479,7 +478,7 @@ Designed & Developed with by Enesehs
                 </div>
             </div>
             <div class="project-card" data-scroll-animation="fade-up">
-                <img src="/public/assets/projects/project8.webp" alt="Hotpage - A Modern, Customizable New Tab Extension" draggable="false" data-nosnippet>
+                <img src="/public/assets/projects/project8.webp" alt="Hotpage - A Modern, Customizable New Tab Extension" draggable="false" data-nosnippet loading="lazy" decoding="async">
                 <div class="project-info-overlay">
                     <h3>Hotpage</h3>
                     <div class="tag-container">
@@ -516,7 +515,72 @@ Designed & Developed with by Enesehs
         </div>
 
         <div class="skills-container">
-            <!--JS-->
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">Unreal Engine</h3>
+                <div class="tech-stack-tags">
+                    <span>Blueprints</span>
+                    <span>Level Design</span>
+                    <span>Lighting</span>
+                    <span>C++ Integration</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">C++</h3>
+                <div class="tech-stack-tags">
+                    <span>OOP</span>
+                    <span>Memory Management</span>
+                    <span>Data Structures</span>
+                    <span>Algorithms</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">Python</h3>
+                <div class="tech-stack-tags">
+                    <span>Automation</span>
+                    <span>Data Analysis</span>
+                    <span>Tkinter</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">JavaScript</h3>
+                <div class="tech-stack-tags">
+                    <span>Web Development</span>
+                    <span>DOM Manipulation</span>
+                    <span>Interactive Features</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">HTML / CSS</h3>
+                <div class="tech-stack-tags">
+                    <span>Responsive Design</span>
+                    <span>Modern Layouts</span>
+                    <span>Animations</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">Unity</h3>
+                <div class="tech-stack-tags">
+                    <span>Game Prototyping</span>
+                    <span>Mobile Development</span>
+                    <span>C#</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">Git</h3>
+                <div class="tech-stack-tags">
+                    <span>Version Control</span>
+                    <span>Collaboration</span>
+                    <span>Project Management</span>
+                </div>
+            </div>
+            <div class="tech-stack-card">
+                <h3 class="tech-stack-name">SQL</h3>
+                <div class="tech-stack-tags">
+                    <span>Database Design</span>
+                    <span>Queries</span>
+                    <span>Data Management</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -681,18 +745,17 @@ Designed & Developed with by Enesehs
         <div class="about-container">
             <div class="about-content-wrapper">
                 <div class="about-text">
-                    <p data-i18n="about_text">I'm Enes, a 20-year-old game developer whose passion for game development was shaped by my early
-                        experiences with programming. I am the founder and lead developer of Plasenta Entertainment. I
-                        have completed several important programs, including the Google Game and App Academy. By
-                        developing projects using Unreal Engine 5 and C++, I bring my imagination to life in the gaming
-                        world. <br> My goal is to create AAA-quality games that provide players with unforgettable
-                        experiences, and I have big dreams in this field. If you're interested in collaborating on this
-                        journey, please feel free to reach out to me.</p>
+                    <div data-i18n="about_text">
+                        <p>My journey into game development started with modding. Very quickly, I realized I enjoyed <strong>building worlds</strong> more than just playing inside them. Watching a story unfold is powerful — but shaping it, controlling it, and carrying its consequences is something else entirely.</p>
+                        <p>I founded <strong>Plasenta Entertainment</strong> to create the kind of <strong>narrative-driven experiences</strong> I was always searching for. Instead of waiting for a game that delivered exactly what I wanted to feel, I decided to build it myself.</p>
+                        <p>My work sits at the intersection of <strong>empathy and engineering</strong>. I design with emotion in mind, but I execute through <strong>Unreal Engine 5 and C++</strong>. For me, <strong>tension is pacing logic</strong>. <strong>Silence is level design</strong>. <strong>Emotional weight</strong> is built through mechanics and systems working together.</p>
+                        <p>I'm not interested in separating story from technology. <strong>The code is part of the storytelling.</strong> Every system I build exists to support what the player feels.</p>
+                    </div>
 
                     <div class="about-details">
                         <div class="detail-item">
                             <h4 data-i18n="position">Current Position</h4>
-                            <p data-i18n="position_value">CEO & Lead Developer at Plasenta Entertainment</p>
+                            <p data-i18n="position_value">Founder & Lead Developer at Plasenta Entertainment</p>
                         </div>
                         <div class="detail-item">
                             <h4 data-i18n="specialization">Specialization</h4>
@@ -707,7 +770,7 @@ Designed & Developed with by Enesehs
                 </div>
                 <div class="about-image">
                     <div class="about-image-container">
-                        <img src="/public/assets/img/sumelaabbey.webp" loading="lazy" class="about-img">
+                        <img src="/public/assets/img/sumelaabbey.webp" alt="Sumela Abbey" loading="lazy" decoding="async" class="about-img">
                     </div>
                 </div>
             </div>
@@ -865,9 +928,9 @@ Designed & Developed with by Enesehs
         
         <canvas id="stage"></canvas>
         
-        <script src="/src/js/vendor/scrollreveal.min.js"></script>
+        <script src="/src/js/vendor/scrollreveal.min.js" defer></script>
         <script type="module" src="/src/js/core.js"></script>
-        <script type="module" src="/src/js/memes.js"></script>
+        <script>requestIdleCallback?requestIdleCallback(()=>import('/src/js/memes.js')):setTimeout(()=>import('/src/js/memes.js'),3e3);</script>
         
         <script>
             if ('serviceWorker' in navigator) {
