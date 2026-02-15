@@ -11,6 +11,7 @@ import './core/captcha.js';
 import './core/clickspark.js';
 import './core/language-detector.min.js';
 import './core/scroll-animations.min.js';
+import './core/extra-animations.js';
 
 const month = new Date().getMonth();
 if (month === 11 || month === 0 || month === 1) {
